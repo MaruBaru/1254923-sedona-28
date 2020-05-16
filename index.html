@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>Седона:главная страница</title>
+  <!-- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css"> -->
+</head>
 
-  </body>
+<body>
+  <header class="main-header">
+    <nav>
+      <ul class="site-navigation">
+        <li>
+          <a href="#">Информация</a>
+        </li>
+        <li>
+          <a href="#">Фото и видео</a>
+        </li>
+        <li>
+          <a href="#">Карта штата</a>
+        </li>
+        <li>
+          <a href="hotels.html">Гостиницы</a>
+        </li>
+      </ul>
+      <a class="main-logo"> <img src="img/logo.svg" alt="Логотип сайта города Седона"></a>
+    </nav>
+    <section>
+      <img src="img/welcome.svg" alt="Приветсвенное Изображение">
+    </section>
+  </header>
+  <main>
+    <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+    <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+    <section class="cause_1">
+      <h3>Настоящий городок</h3>
+      <p>-№1-<br>
+        Седона - не аттракцион для туристов, там течёт своя жизнь
+      </p>
+    </section>
+    <section class="cause_1_photo">
+      <a> <img src="img/realtown.png" width="800" height="256" alt="Изображение деревни"></a>
+    </section>
+    <section class="services">
+      <div>
+        <h2><a href="#">Жилье</a></h2>
+        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      </div>
+      <div>
+        <h2><a href="#">Еда</a></h2>
+        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+      <div>
+        <h2><a href="#">Сувениры</a></h2>
+        <p>Не только китайского, но и местного производства!</p>
+      </div>
+
+    </section>
+    <section class="cause_2_photo">
+      <a> <img src="img/devilsbridge.png" width="800" height="256" alt="Изображение мост дьявола"></a>
+    </section>
+    <section class="cause_2">
+      <h3>Там есть мост дьявола</h3>
+      <p>-№2-<br>
+        Да, по нему можно пройти! Если конечно вы осмелитесь
+      </p>
+    </section>
+    <section class="cause_3">
+      <h3>Небольшая площадь</h3>
+      <p>-№3-<br>
+        Все достопримечательности находятся очень близко
+      </p>
+    </section>
+    <section class="cause_4">
+      <h3>Красивая дорога</h3>
+      <p>-№4-<br>
+        Ехать в седону из лас-вегаса совсем не скучно!
+      </p>
+    </section>
+    <section class="cause_5">
+      <h3>Мало туристов</h3>
+      <p>-№5-<br>
+        Большинство едет в гранд каньон и толпится там
+      </p>
+    </section>
+    <section class="hotel_search">
+      <h2>
+        Заинтересовались?
+      </h2>
+      <p>
+        Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
+      </p>
+      <button class="hotel-search" type="button">Поиск гостиницы в седоне</button>
+    </section>
+    <section class="map">
+      <!-- Здесь будет карта -->
+    </section>
+  </main>
+  <footer class="main-footer">
+    <section class="contacts">
+      <p>#visitsedona <br>
+        ТЕЛ: +7(495) 666-01-66
+      </p>
+    </section>
+    <section class="social_network">
+      <ul>
+        <li>
+          <a href="#">Твиттер</a>
+        </li>
+        <li>
+          <a href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a href="#">Ютуб</a>
+        </li>
+      </ul>
+    </section>
+    <p>
+      Разработано:
+      <a href="https://htmlacademy.ru">HTML Academy</a>
+    </p>
+  </footer>
+  <section class="hotel-search">
+    <h2>Поиск гостиницы в седоне</h2>
+    <p>Дата заезда</p>
+    <p>Дата выезда</p>
+    <p>Взрослые</p>
+    <p>Дети</p>
+    <!-- Здесь будет форма поиска -->
+    <button type="button">Найти</button>
+  </section>
+</body>
+
 </html>

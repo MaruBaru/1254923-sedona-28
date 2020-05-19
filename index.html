@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона:главная страница</title>
   <!-- <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style.min.css"> -->
@@ -13,13 +14,13 @@
     <nav>
       <ul class="site-navigation">
         <li>
-          <a href="#">Информация</a>
+          <a href="#!">Информация</a>
         </li>
         <li>
-          <a href="#">Фото и видео</a>
+          <a href="#!">Фото и видео</a>
         </li>
         <li>
-          <a href="#">Карта штата</a>
+          <a href="#!">Карта штата</a>
         </li>
         <li>
           <a href="hotels.html">Гостиницы</a>
@@ -27,65 +28,61 @@
       </ul>
       <a class="main-logo"> <img src="img/logo.svg" alt="Логотип сайта города Седона"></a>
     </nav>
-    <section>
+    <div class="slogan_welcome_sedona">
       <img src="img/welcome.svg" alt="Приветсвенное Изображение">
-    </section>
+    </div>
   </header>
-  <main>
-    <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-    <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
-    <section class="cause_1">
-      <h3>Настоящий городок</h3>
-      <p>-№1-<br>
-        Седона - не аттракцион для туристов, там течёт своя жизнь
-      </p>
+  <main class="main-contant">
+    <section class="hero">
+      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
-    <section class="cause_1_photo">
-      <a> <img src="img/realtown.png" width="800" height="256" alt="Изображение деревни"></a>
+    <section class="main-contant_reason-1">
+      <h2>Настоящий городок</h2>
+      <span>-№1-</span>
+      <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+      <div class="main-contant_reason-1_photo">
+       <img src="img/realtown.png" width="800" height="256" alt="Изображение деревни">
+      </div>
     </section>
-    <section class="services">
-      <div>
-        <h2><a href="#">Жилье</a></h2>
+    <section class="main-contant_services">
+      <div class="housing">
+        <h2><a href="#!">Жилье</a></h2>
         <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
       </div>
-      <div>
-        <h2><a href="#">Еда</a></h2>
+      <div class="food">
+        <h2><a href="#!">Еда</a></h2>
         <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
       </div>
-      <div>
-        <h2><a href="#">Сувениры</a></h2>
+      <div class="souvenirs">
+        <h2><a href="#!">Сувениры</a></h2>
         <p>Не только китайского, но и местного производства!</p>
       </div>
-
     </section>
-    <section class="cause_2_photo">
-      <a> <img src="img/devilsbridge.png" width="800" height="256" alt="Изображение мост дьявола"></a>
+    <section class="main-contant_reason-2">
+      <div class="main-contant_reason-2_photo">
+        <img src=" img/devilsbridge.png" width="800" height="256" alt="Изображение мост дьявола">
+      </div>
+      <h2>Там есть мост дьявола</h2>
+      <span>-№2-</span>
+      <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </section>
-    <section class="cause_2">
-      <h3>Там есть мост дьявола</h3>
-      <p>-№2-<br>
-        Да, по нему можно пройти! Если конечно вы осмелитесь
-      </p>
+    <section class="main-contant_reason-3">
+      <h2>Небольшая площадь</h2>
+      <span>-№3-</span>
+      <p>Все достопримечательности находятся очень близко</p>
     </section>
-    <section class="cause_3">
-      <h3>Небольшая площадь</h3>
-      <p>-№3-<br>
-        Все достопримечательности находятся очень близко
-      </p>
+    <section class="main-contant_reason-4">
+      <h2>Красивая дорога</h2>
+      <span>-№4-</span>
+      <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
     </section>
-    <section class="cause_4">
-      <h3>Красивая дорога</h3>
-      <p>-№4-<br>
-        Ехать в седону из лас-вегаса совсем не скучно!
-      </p>
+    <section class="main-contant_reason-5">
+      <h2>Мало туристов</h2>
+      <span>-№5-</span>
+      <p>Большинство едет в гранд каньон и толпится там</p>
     </section>
-    <section class="cause_5">
-      <h3>Мало туристов</h3>
-      <p>-№5-<br>
-        Большинство едет в гранд каньон и толпится там
-      </p>
-    </section>
-    <section class="hotel_search">
+    <section class="main-contant_hotel-search">
       <h2>
         Заинтересовались?
       </h2>
@@ -93,36 +90,35 @@
         Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
       <button class="hotel-search" type="button">Поиск гостиницы в седоне</button>
-    </section>
-    <section class="map">
-      <!-- Здесь будет карта -->
+      <div class="map">
+        <!-- Здесь будет карта -->
+      </div>
     </section>
   </main>
   <footer class="main-footer">
-    <section class="contacts">
-      <p>#visitsedona <br>
-        ТЕЛ: +7(495) 666-01-66
-      </p>
-    </section>
-    <section class="social_network">
+    <div class="contacts">
+      <a href="#!" title="instagram">#visitsedona</a>
+      <p>ТЕЛ: +7(495) 666-01-66</p>
+    </div>
+    <div class="social_group">
       <ul>
         <li>
-          <a href="#">Твиттер</a>
+          <a href="#!">Твиттер</a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a href="#!">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Ютуб</a>
+          <a href="#!">Ютуб</a>
         </li>
       </ul>
-    </section>
-    <p>
+    </div>
+    <div class="site_htmlacademy">
       Разработано:
       <a href="https://htmlacademy.ru">HTML Academy</a>
-    </p>
+    </div>
   </footer>
-  <section class="hotel-search">
+  <section class="hotel-search_form">
     <h2>Поиск гостиницы в седоне</h2>
     <p>Дата заезда</p>
     <p>Дата выезда</p>

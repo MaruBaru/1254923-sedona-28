@@ -26,7 +26,7 @@
           <a href="hotels.html">Гостиницы</a>
         </li>
       </ul>
-      <a class="main-logo"> <img src="img/logo_sedona.svg" alt="Логотип сайта города Седона"></a>
+      <a class="main-logo" href="index.html"> <img src="img/logo_sedona.svg" aria-label="Логотип сайта города Седона. Обновить страницу"></a>
     </nav>
     <div class="slogan_welcome_sedona" >
       <img src="img/welcome.svg" alt="Добро пожаловать в Седону">
@@ -48,24 +48,24 @@
     </section>
     <section class="main-contant_services">
       <div class="housing">
-        <img src="img/icon-house.svg" alt="Иконка жилье">
+        <img src="img/icon-house.svg" aria-label="Иконка жилье">
         <h2><a href="#!">Жилье</a></h2>
         <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
       </div>
       <div class="food">
-        <img src="img/icon-food.svg" alt="Иконка еда">
+        <img src="img/icon-food.svg" aria-label="Иконка еда">
         <h2><a href="#!">Еда</a></h2>
         <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
       </div>
       <div class="souvenirs">
-        <img src="img/icon_souvenrs.svg" alt="Иконка сувениры">
+        <img src="img/icon_souvenrs.svg" aria-label="Иконка сувениры">
         <h2><a href="#!">Сувениры</a></h2>
         <p>Не только китайского, но и местного производства!</p>
       </div>
     </section>
     <section class="main-contant_reason-2">
       <div class="main-contant_reason-2_photo">
-        <img src=" img/devilsbridge.jpg" width="800" height="256" alt="Изображение мост дьявола">
+        <img src=" img/devilsbridge.jpg" width="800" height="256" aria-label="Изображение мост дьявола">
       </div>
       <h2>Там есть мост дьявола</h2>
       <span>-№2-</span>
@@ -95,13 +95,13 @@
       </p>
       <button class="hotel-search" type="button">Поиск гостиницы в седоне</button>
       <div class="map">
-        <img src="img/map.png" width="1199" height="593" alt="Карта">
+        <img src="img/map.png" width="1199" height="593" alt="Карта Седона" tabindex="0">
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="contacts">
-      <a href="#!" title="instagram">#visitsedona</a>
+      <a href="#!" aria-label="Инстаграм города Седона">#visitsedona</a>
       <p>ТЕЛ: +7(495) 666-01-66</p>
     </div>
     <div class="social_group">
@@ -113,30 +113,39 @@
           <a href="#!">Фейсбук</a>
         </li>
         <li>
-          <a href="#!">Ютуб</a>
+          <a href="#!" >Ютуб</a>
         </li>
       </ul>
       <!--подключение иконок социальных групп будет из CSS -->
     </div>
     <div class="site_htmlacademy">
       Разработано:
-      <a href="https://htmlacademy.ru"> <img src="img/logo_html_academy.svg" alt="Логотип html Academy"></a>
+      <a href="https://htmlacademy.ru"> <img src="img/logo_html_academy.svg" aria-label="Сайт htmlAcademy"></a>
     </div>
   </footer>
   <section class="hotel-search_form">
-    <h2>Поиск гостиницы в седоне</h2>
-    <p>Дата заезда</p>
-    <div class="arrival_date">
-      <!--<img src="img/calendar.svg" alt="Иконка календарь">-->
-    </div>
-    <p>Дата выезда</p>
-    <div class="date_of_departure">
-      <!--<img src="img/calendar.svg" alt="Иконка календарь">-->
-    </div>
-    <p>Взрослые</p>
-    <p>Дети</p>
-    <!-- Здесь будет форма поиска -->
-    <button type="button">Найти</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <div class="hotel-search_form_arrival_date">
+        <label for="arrival_date">Дата заезда</label>
+        <input id="arrival_date" type="text" name="arrival_date" placeholder="20 апреля 2017" required>
+        <!--<img src="img/calendar.svg" alt="Иконка календарь">-->
+      </div>
+      <div class="hotel-search_form_date_of_departure">
+        <label for="date_of_departure">Дата выезда</label>
+        <input id="date_of_departure" type="text" name="date_of_departure" placeholder="4 июля 2017" required>
+        <!--<img src="img/calendar.svg" alt="Иконка календарь">-->
+      </div>
+     <div class="hotel-search_form_adults">
+        <label for="adults">Взрослые</label>
+        <input type="number" min="1" step="1" id="adults" name="adults" placeholder="2" required>
+     </div>
+     <div class="hotel-search_form_children">
+        <label for="children">Дети</label>
+        <input type="number" min="0" step="1" id="children" name="children" placeholder="0">
+     </div>
+     <button type="submit">Найти</button>
+    </form>
+
   </section>
 </body>
 

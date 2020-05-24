@@ -25,35 +25,65 @@
           <a href="hotels.html">Гостиницы</a>
         </li>
       </ul>
-      <a class="main-logo" href="index.html"> <img src="img/logo_sedona.svg" aria-label="Логотип сайта города Седона. Переход на главную страницу"></a>
+      <a class="main-logo" href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона"
+          aria-label="Логотип сайта города Седона. Переход на главную страницу"></a>
     </nav>
   </header>
   <main class="catalog">
     <section class="main-filter">
-      <h1>Поиск гостиницы в седоне</h1>
-      <!-- Здесь будет форма поиска -->
-      <section>
-        <h2>Инфраструктура:</h2>
-        <ul>
-          <li>бассейн</li>
-          <li>парковка</li>
-          <li>wi-fi</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Тип жилья</h2>
-        <ul>
-          <li>гостиница</li>
-          <li>мотель</li>
-          <li>апартаменты</li>
-        </ul>
-      </section>
-      <section>
-        <h2>стоимость в сутки (р)</h2>
-        <p>от 0</p>
-        <p>до 3000</p>
-        <button type="button">Показать</button>
-      </section>
+      <h1 class="visually-hidden">Поиск гостиницы в седоне</h1>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="main-filter-infrastructure">
+          <legend>Инфраструктура</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="pool" id="main-filter-pool" checked>
+              <label for="main-filter-pool">бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="main-filter-parking">
+              <label for="main-filter-parking">парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wi-fi" id="main-filter-wi-fi">
+              <label for="main-filter-wi-fi">wi-fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="main-filter-type-of-housing">
+          <legend>Тип жилья</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="hotel" id="main-filter-hotel" checked>
+              <label for="main-filter-hotel">гостиница</label>
+            </li>
+            <li>
+              <input type="checkbox" name="motel" id="main-filter-motel" checked>
+              <label for="main-filter-motel">мотель</label>
+            </li>
+            <li>
+              <input type="checkbox" name="apartments" id="main-filter-apartments" checked>
+              <label for="main-filter-apartments">апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="main-filter-cost-per-day">
+          <p>Стоимость в сутки (р)</p>
+          <label for="cost-per-day-from">от </label>
+          <input type="number" id="cost-per-day-from" name="from" min="0" max="3000" step="100" placeholder="0"
+            value="0">
+          <label for="cost-per-day-before">до </label>
+          <input type="number" id="cost-per-day-before" name="before" min="0" max="3000" step="100" placeholder="3000"
+            value="3000">
+          <!-- здесь будет ползунок поиска в диапазоне-->
+          <div class="cost-per-day-slider">
+            <div class="slider-line"></div>
+            <div class="slider-from"></div>
+            <div class="slider-before"></div>
+          </div>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
     <section class="sorting_results">
       <h2>Найдено:<span>3</span></h2>
@@ -70,8 +100,10 @@
           <a href="#!">по рейтингу</a>
         </li>
       </ul>
-      <button class="sorting" type="button" aria-label="Сортивка с высоким рейтингом"><span class="sorting_up"></span></button>
-      <button class="sorting" type="button" aria-label="Сортивка с низким рейтингом"><span class="sorting_down"></span></button>
+      <button class="sorting" type="button" aria-label="Сортивка с высоким рейтингом"><span
+          class="sorting_up"></span></button>
+      <button class="sorting" type="button" aria-label="Сортивка с низким рейтингом"><span
+          class="sorting_down"></span></button>
     </section>
     <section>
       <ul>
@@ -153,7 +185,8 @@
     </div>
     <div class="site_htmlacademy">
       Разработано:
-      <a href="https://htmlacademy.ru"> <img src="img/logo_html_academy.svg" aria-label="Сайт htmlAcademy"></a>
+      <a href="https://htmlacademy.ru"> <img src="img/logo_html_academy.svg" alt="Логотип htmlAcademy"
+          aria-label="Сайт htmlAcademy"></a>
     </div>
   </footer>
 </body>

@@ -1,10 +1,355 @@
-.slogan_welcome_sedona {
+body {
+    /* min-width: 1280px; */
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-style:normal;
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--basic-dark);
+    background-color: var(--basic-light-grey);
+}
+
+.container {
+    width: 1200px;
+    background-color:var(--basic-white);
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden{
+    display: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+} 
+/* main navigation */
+
+.site-navigation a {
+    color: var(--basic-black);
+    font-size: 14px;
+    line-height:26px;
+    font-weight:700;
+}
+.navigation-wrapper {
+     background-color:var(--basic-white);
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation a:hover {
+    color: var(--basic-blue);
+}
+
+.site-navigation a:focus {
+    opacity:0.3;
+}
+
+.site-navigation a:active {
+    color: var(--basic-brown);
+}
+
+.main-logo:hover{transform:scale(1.05);}
+
+/* welcome sedona */
+.welcome-sedona {
     background:url(/img/background_photo_welcome.jpg); 
     background-repeat:no-repeat;
 }
+
+/* hero */
+.hero h1 {
+    font-size: 21px;
+    line-height:26px;
+    font-weight:700;
+    color: var(--basic-black);
+}
+
+.hero p {
+    line-height:26px;
+}
+
+.hero {
+    background-color: var(--basic-white) ;
+}
+
+
+/*hotel-search*/
+.hotel-search h2{
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--basic-black);
+}
+
+.hotel-search p{
+    line-height: 24px;
+}
+
+/* button */
+.button {
+    font:inherit;
+    font-size:21px;
+    line-height:26px;
+    font-weight:700;
+    text-transform: uppercase;
+    vertical-align: middle;
+    border:none;
+    outline:none;
+    border-radius: 0px;
+    color:var(--basic-white);
+    background-color: var(--basic-blue);
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--special-dark-blue);
+}
+
+.button:focus{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--special-extra-blue);
+}
+
+.search-form button {
+    padding:16px 195px 16px 196px;
+}
+
+.hotel-search button {
+    background-color: var(--basic-brown);
+    padding:30px 124px 30px 125px;
+}
+
+.hotel-search button:hover {
+    background-color: var(--special-dark-brown);
+}
+
+.hotel-search button:focus {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--special-extra-brown);
+}
+
+
+/* footer */
+
+.main-footer {
+    background-color:var(--basic-white);
+    opacity:0.9;
+}
+
+.contacts{
+    font-size:21px;
+    line-height:26px;
+    font-weight:700;
+    text-align:left;
+    color: var(--basic-black);
+}
+.contacts a{
+    color: var(--basic-black);
+}
+
+
+.social {
+    display: inline-block;
+    margin-right: 7px;
+    width: 46px;
+    height: 48px;
+    background-color:var(--basic-blue);
+    background-image: url(/img/Spritesocial.svg);
+}
+
+.social-bth-tw{
+    background-position:15px;
+    background-repeat: no-repeat;}
+.social-bth-fb{
+    background-position:-35px;
+    background-repeat: no-repeat;}
+.social-bth-yt{
+    background-position:-90px;
+    background-repeat: no-repeat;}
+
+.social:hover{
+    background-color:var(--special-dark-blue)
+}
+/* Настроить прозрачность иконок */
+.social:focus{
+    background-color: var(--special-extra-blue);
+}
+
+
+.site-htmlacademy p {
+    font-size: 14px;
+    line-height: 26px;
+    color:var(--basic-black);
+}
+
+.htmlacademy {
+    display: inline-block;
+    width: 122px;
+    height: 48px;
+    background: url(/img/logo_html_academy.svg) no-repeat;
+    background-position: 0px 0px;
+}
+
+.htmlacademy:hover {
+    background: url(/img/logo-htmlacademyhover.svg) no-repeat;
+}
+
+.htmlacademy:active {
+    background: url(/img/logo-htmlacademyfocus.svg) no-repeat;
+}
+
+/* search-form */
+.search-form{
+    background-color: var(--basic-white);
+    color:var(--basic-black);
+    line-height:26px;
+    font-weight:700;
+    width:568px;
+    height: 395px;
+}
+
+.search-form input[type="text"]{
+  font: inherit;
+  color: var(--basic-black);
+  background-color: var(--basic-light-grey);
+  border:none;
+  border-radius: 0px;
+}
+
+.search-form input:hover {
+  background-color: var(--special-platinum);
+}
+
+.search-form input:focus {
+    background-color: var(--basic-white);
+    border:2px solid var(--special-silver);
+}
+
+.calendar {
+    background-image: url(/img/searchform.svg);
+    background-repeat: no-repeat;
+    width:21px;
+    height: 23px;
+    background-position:-206px -2px; 
+}
+
+.calendar:hover {
+    background-position:-206px -41px;
+}
+
+.calendar:focus {
+    background-position:-206px -79px;
+}
+
+.search-form-minus {
+    background-image: url(/img/searchform.svg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.search-form-plus {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/searchform.svg);
+    background-repeat: no-repeat;
+}
+
+/* hotels */
 .main-filter {
     background:url(/img/search_filter.jpg); 
     background-repeat:no-repeat;
 }
+
+/* results */
+.results {
+    background-color: var(--basic-white);
+    text-align: left;
+}
+
+.item{
+    list-style:none;
+}
+
+.hotel li{
+    border-top:2px solid var(--special-silver);
+    border-bottom:2px solid var(--special-silver);;
+}
+
+.item a {
+    color: var(--basic-black);
+    font-size: 21px;
+    line-height:26px;
+    font-weight:700;
+}
+
+.item a:hover {
+    color: var(--basic-blue);
+}
+
+.item a:focus {
+    color:rgb(0, 0, 0, 0.3);
+}
+
+.item .details{
+    font: inherit;
+    font-weight:700;
+    color: var(--basic-white);
+    padding:3px 16px 3px 17px
+}
+.item .details:hover{
+    color: var(--basic-white);
+}
+.item .details:focus{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.reservation {
+    font: inherit;
+    font-weight:700;
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+    padding:3px 16px 3px 17px
+}
+.reservation:hover{
+    background-color: var(--special-dark-brown);
+}
+.reservation:hover{
+    background-color: var(--special-extra-brown);
+}
+:root {
+    --basic-black: #000000;
+    --basic-dark: #333333;
+    --basic--liver:#666666;
+    --basic-grey: #888888;
+    --basic-blue: #81B3D2;
+    --basic-extra-light: #EEEEEE;
+    --basic-light-grey:#F2F2F2;
+    --basic-white: #ffffff;
+    --basic-brown: #766357;
+
+    --special-light-grey:#CACACA;
+    --special-dark-blue:#669EC0;
+    --special-extra-blue:#5496BD;
+    --special-dark-brown:#604E43;
+    --special-extra-brown:#503E33;
+    --special-platinum:#EBEBEB;
+    --special-silver:#E5E5E5;
+}
+
 
 

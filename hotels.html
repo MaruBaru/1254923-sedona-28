@@ -5,12 +5,15 @@
   <title>Седона:поиск гостиниц</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+ <div class="container">
   <header class="main-header">
-    <nav>
+    <nav class="main-navigation">
       <ul class="site-navigation">
         <li>
           <a href="#!">Информация</a>
@@ -25,8 +28,9 @@
           <a href="hotels.html">Гостиницы</a>
         </li>
       </ul>
-      <a class="main-logo" href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона"
-          aria-label="Логотип сайта города Седона. Переход на главную страницу"></a>
+      <div class="main-logo"><a href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона"
+          aria-label="Логотип сайта города Седона"></a>
+      </div>
     </nav>
   </header>
   <main class="catalog">
@@ -88,7 +92,7 @@
     <section class="sorting_results">
       <h2>Найдено:<span>3</span></h2>
       <p>Сортировка:</p>
-      <ul>
+      <ul class="item">
         <!--подключение иконок социальных групп будет из CSS -->
         <li>
           <a href="#!">по цене</a>
@@ -100,13 +104,13 @@
           <a href="#!">по рейтингу</a>
         </li>
       </ul>
-      <button class="sorting" type="button" aria-label="Сортивка с высоким рейтингом"><span
+      <button class="sorting" type="button" aria-label="По возрастанию"><span
           class="sorting_up"></span></button>
-      <button class="sorting" type="button" aria-label="Сортивка с низким рейтингом"><span
+      <button class="sorting" type="button" aria-label="по убыванию"><span
           class="sorting_down"></span></button>
     </section>
-    <section>
-      <ul>
+    <section class="results">
+      <ul class="item hotel">
         <li>
           <a href="#!">
             <h3>Amara Resort & Spa</h3>
@@ -114,8 +118,8 @@
           </a>
           <p>Гостиница</p>
           <p>От 4000 Р.</p>
-          <a href="#!">Подробнее</a>
-          <button type="button">Забронировать</button>
+          <a href="#!" class="button details">Подробнее</a>
+          <button type="button" class="button reservation">Забронировать</button>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -133,8 +137,8 @@
           </a>
           <p>Мотель</p>
           <p>От 3000 Р.</p>
-          <a href="#!">Подробнее</a>
-          <button type="button">Забронировать</button>
+          <a href="#!" class="button details">Подробнее</a>
+          <button type="button" class="button reservation">Забронировать</button>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -151,8 +155,8 @@
           </a>
           <p>Апартаменты</p>
           <p>От 2000 Р.</p>
-          <a href="#!">Подробнее</a>
-          <button type="button">Забронировать</button>
+          <a href="#!" class="button details">Подробнее</a>
+          <button type="button" class="button reservation" >Забронировать</button>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -170,25 +174,17 @@
       <a href="#!" aria-label="Инстаграм города Седона">#visitsedona</a>
       <p>ТЕЛ: +7(495) 666-01-66</p>
     </div>
-    <div class="social_group">
-      <ul>
-        <li>
-          <a href="#!">Твиттер</a>
-        </li>
-        <li>
-          <a href="#!">Фейсбук</a>
-        </li>
-        <li>
-          <a href="#!">Ютуб</a>
-        </li>
-      </ul>
-    </div>
-    <div class="site_htmlacademy">
-      Разработано:
-      <a href="https://htmlacademy.ru"> <img src="img/logo_html_academy.svg" alt="Логотип htmlAcademy"
-          aria-label="Сайт htmlAcademy"></a>
-    </div>
+    <div class="social-group">
+      <a class="social social-bth-tw" href="#!" aria-label="twitter"></a>
+      <a class="social social-bth-fb" href="#!" aria-label="facebook"></a>
+      <a class="social social-bth-yt" href="#!" aria-label="youTube"></a>
+     </div>
+    <div class="site-htmlacademy">
+      <p>Website by</p>
+      <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy"></a>
+  </div>
   </footer>
+ </div>
 </body>
 
 </html>

@@ -87,6 +87,19 @@ textarea:focus {
     background-color: var(--basic-white) ;
 }
 
+.block h2, a{
+    font-size: 21px;
+    font-weight:700;
+    color: var(--basic-black);
+}
+
+.wrap{
+    background-color: var(--basic-extra-light);
+}
+.blue {
+    background-color: var(--basic-blue);
+}
+
 
 /*hotel-search*/
 .hotel-search h2{
@@ -269,11 +282,142 @@ textarea:focus {
     background-repeat: no-repeat;
 }
 
-/* hotels */
+/* page hotels */
+/* main filter */
+
 .main-filter {
     background:url(/img/search_filter.jpg); 
+    background-color: var(--basic-grey);
     background-repeat:no-repeat;
+    color: var(--basic-white);
+    text-align:left;
 }
+
+.main-filter legend {
+    font-weight:700;
+}
+
+.main-filter ul {
+    list-style: none;
+}
+.main-filter fieldset {
+    border: 0;
+}
+
+
+/* cost */
+
+.main-filter-cost p {
+    font-size:16px;
+    font-weight:700;
+}
+.cost{
+    width: 224px;
+    height: 36px;
+    border:2px solid var(--basic-white);
+    border-radius:2px;
+    text-align: center;
+}
+
+
+.cost input[type="number"]{
+    font: inherit;
+    color: var(--basic-white);
+    background:transparent;
+    border:none;
+}
+
+.cost svg {
+    fill:var(--basic-white);
+}
+
+/* .slider-line rect{
+    width:200px;
+    height:2px;
+    fill:var(--basic-white);
+} */
+
+.slider-button{
+    width: 19px;
+    height:21px;
+    background-image: url(/img/filter-button.svg);
+    background-repeat: no-repeat;
+}
+
+.slider-button:hover{
+    width: 23px;
+    height:24px;
+}
+
+/* main filter button */
+
+.filter-button {
+    font:inherit;
+    text-transform: uppercase;
+    vertical-align: middle;
+    outline:none;
+    color:var(--basic-white);
+    border:2px solid var(--basic-white);
+    border-radius: 2px;
+    background-image: none; 
+    background: transparent;
+    background-color: transparent;
+    padding:8px 35px 7px 36px;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+/* sorting results */
+.sorting-results {
+    text-align: left;
+}
+
+.sorting-results h2 {
+    font-size:21px;
+    line-height:26px;
+    font-weight:700;
+}
+
+.sorting-results ul {
+    list-style: none;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sorting-item a {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color:rgba(0, 1, 1, 0.3);
+    border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sorting-item a:hover {
+    color: var(--basic-blue);
+}
+
+.sorting-item a:focus {
+    color: var(--basic-black);
+    border: none;
+}
+.sorting-item a:active {
+    color: var(--basic-blue);
+    border:none;
+}
+
+.sorting {
+    outline:none;
+    background-image:url(/img/sorting.svg); 
+    background-color: transparent;
+    border:none;
+    width:11px;
+    height:10px;
+}
+
 
 /* results */
 .results {
@@ -331,6 +475,11 @@ textarea:focus {
 .reservation:hover{
     background-color: var(--special-extra-brown);
 }
+
+.rating p{
+    background-color: var(--basic-light-grey);
+}
+
 :root {
     --basic-black: #000000;
     --basic-dark: #333333;

@@ -38,7 +38,7 @@
       <h1 class="visually-hidden">Поиск гостиницы в седоне</h1>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="main-filter-infrastructure">
-          <legend>Инфраструктура</legend>
+          <legend>Инфраструктура:</legend>
           <ul>
             <li>
               <input type="checkbox" name="pool" id="main-filter-pool" checked>
@@ -55,7 +55,7 @@
           </ul>
         </fieldset>
         <fieldset class="main-filter-type-of-housing">
-          <legend>Тип жилья</legend>
+          <legend>Тип жилья:</legend>
           <ul>
             <li>
               <input type="checkbox" name="hotel" id="main-filter-hotel" checked>
@@ -71,29 +71,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="main-filter-cost-per-day">
+        <fieldset class="main-filter-cost">
           <p>Стоимость в сутки (р)</p>
-          <label for="cost-per-day-from">от </label>
-          <input type="number" id="cost-per-day-from" name="from" min="0" max="3000" step="100" placeholder="0"
-            value="0">
-          <label for="cost-per-day-before">до </label>
-          <input type="number" id="cost-per-day-before" name="before" min="0" max="3000" step="100" placeholder="3000"
-            value="3000">
+          <div class="cost">
+            <label for="cost-from">от </label>
+            <input type="number" id="cost-from" name="from" min="0" max="3000" step="100" placeholder="0" value="0">
+            <svg><rect width="2px" height="22"/></svg>
+            <label for="cost-before">до </label>
+            <input type="number" id="cost-before" name="before" min="0" max="3000" step="100" placeholder="3000" value="3000">
+          </div>
           <!-- здесь будет ползунок поиска в диапазоне-->
-          <div class="cost-per-day-slider">
-            <div class="slider-line"></div>
-            <div class="slider-from"></div>
-            <div class="slider-before"></div>
+          <div class="slider">
+            <!-- <div class="slider-line">
+              <svg> <rect/> </svg>
+            </div> -->
+            <div class="slider-from slider-button"></div>
+            <div class="slider-before slider-button"></div>
           </div>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button type="submit" class="filter-button">Показать</button>
       </form>
     </section>
-    <section class="sorting_results">
+    <section class="sorting-results">
       <h2>Найдено:<span>3</span></h2>
       <p>Сортировка:</p>
-      <ul class="item">
-        <!--подключение иконок социальных групп будет из CSS -->
+      <ul class="sorting-item">
         <li>
           <a href="#!">по цене</a>
         </li>
@@ -105,9 +107,9 @@
         </li>
       </ul>
       <button class="sorting" type="button" aria-label="По возрастанию"><span
-          class="sorting_up"></span></button>
+          class="sorting-up"></span></button>
       <button class="sorting" type="button" aria-label="по убыванию"><span
-          class="sorting_down"></span></button>
+          class="sorting-down"></span></button>
     </section>
     <section class="results">
       <ul class="item hotel">

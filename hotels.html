@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <title>Седона:поиск гостиниц</title>
@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
- <div class="container">
+<body class="page-body">
   <header class="main-header">
     <nav class="main-navigation">
       <ul class="site-navigation">
@@ -36,8 +35,8 @@
   <main class="catalog">
     <section class="main-filter">
       <h1 class="visually-hidden">Поиск гостиницы в седоне</h1>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="main-filter-infrastructure">
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filter-infrastructure">
           <legend>Инфраструктура:</legend>
           <ul>
             <li>
@@ -54,7 +53,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="main-filter-type-of-housing">
+        <fieldset class="filter-housing">
           <legend>Тип жилья:</legend>
           <ul>
             <li>
@@ -71,25 +70,23 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="main-filter-cost">
+        <fieldset class="filter-cost">
           <p>Стоимость в сутки (р)</p>
           <div class="cost">
             <label for="cost-from">от </label>
             <input type="number" id="cost-from" name="from" min="0" max="3000" step="100" placeholder="0" value="0">
-            <svg><rect width="2px" height="22"/></svg>
             <label for="cost-before">до </label>
             <input type="number" id="cost-before" name="before" min="0" max="3000" step="100" placeholder="3000" value="3000">
+            <svg><rect width="2px" height="22"/></svg>
           </div>
+          
           <!-- здесь будет ползунок поиска в диапазоне-->
           <div class="slider">
-            <!-- <div class="slider-line">
-              <svg> <rect/> </svg>
-            </div> -->
             <div class="slider-from slider-button"></div>
             <div class="slider-before slider-button"></div>
           </div>
+          <button type="submit" class="filter-button">Показать</button>
         </fieldset>
-        <button type="submit" class="filter-button">Показать</button>
       </form>
     </section>
     <section class="sorting-results">
@@ -114,14 +111,18 @@
     <section class="results">
       <ul class="item hotel">
         <li>
-          <a href="#!">
+          <img class="item-gallery" src="img/AmaraResortSpa.jpg" alt="Amara Resort & Spa">
+          <div class="item-info">
+            <a href="#!">
             <h3>Amara Resort & Spa</h3>
-            <img src="img/AmaraResortSpa.jpg" width="135" height="90" alt="Amara Resort & Spa">
-          </a>
-          <p>Гостиница</p>
-          <p>От 4000 Р.</p>
-          <a href="#!" class="button details">Подробнее</a>
-          <button type="button" class="button reservation">Забронировать</button>
+            </a>
+            <div>
+            <p>Гостиница</p>
+            <p>От 4000 Р.</p>
+            </div>
+            <a href="#!" class="button details">Подробнее</a>
+            <button type="button" class="button reservation">Забронировать</button>
+          </div>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -133,14 +134,18 @@
           </div>
         </li>
         <li>
-          <a href="#!">
-            <h3>Desert Quail Inn</h3>
-            <img src="img/DesertQuailInn.jpg" width="135" height="90" alt="Desert Quail Inn">
-          </a>
-          <p>Мотель</p>
-          <p>От 3000 Р.</p>
-          <a href="#!" class="button details">Подробнее</a>
-          <button type="button" class="button reservation">Забронировать</button>
+          <img class="item-gallery" src="img/DesertQuailInn.jpg" alt="Desert Quail Inn">
+          <div class="item-info">
+            <a href="#!">
+              <h3>Desert Quail Inn</h3>
+            </a>
+            <div>
+            <p>Мотель</p>
+            <p>От 3000 Р.</p>
+            </div>
+            <a href="#!" class="button details">Подробнее</a>
+            <button type="button" class="button reservation">Забронировать</button>
+          </div>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -151,14 +156,18 @@
           </div>
         </li>
         <li>
-          <a href="#!">
-            <h3>Villas at Poco Diablo</h3>
-            <img src="img/VillasatPocoDiablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-          </a>
-          <p>Апартаменты</p>
-          <p>От 2000 Р.</p>
-          <a href="#!" class="button details">Подробнее</a>
-          <button type="button" class="button reservation" >Забронировать</button>
+          <img class="item-gallery" src="img/VillasatPocoDiablo.jpg" alt="Villas at Poco Diablo">
+          <div class="item-info">
+            <a href="#!">
+              <h3>Villas at Poco Diablo</h3>
+            </a>
+            <div>
+              <p>Апартаменты</p>
+              <p>От 2000 Р.</p>
+            </div>
+            <a href="#!" class="button details">Подробнее</a>
+            <button type="button" class="button reservation" >Забронировать</button>
+          </div>
           <div class="rating">
             <div class="stars" tabindex="0">
               <img src="img/star.svg" alt="Звезда">
@@ -169,7 +178,6 @@
         </li>
       </ul>
     </section>
-
   </main>
   <footer class="main-footer">
     <div class="contacts">
@@ -186,7 +194,6 @@
       <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy"></a>
   </div>
   </footer>
- </div>
 </body>
 
 </html>

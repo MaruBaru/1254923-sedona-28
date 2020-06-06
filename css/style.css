@@ -387,16 +387,16 @@ margin:77px auto;
     display: inline-block;
     width: 115px;
     height: 41px;
-    background: url(/img/logo_html_academy.svg) no-repeat;
+    background-image: url(../img/logo_html_academy.svg) no-repeat;
     background-position: 0px 0px;
 }
 
 .htmlacademy:hover {
-    background: url(/img/logo-htmlacademyhover.svg) no-repeat;
+    background-image: url(../img/logo-htmlacademyhover.svg) no-repeat;
 }
 
 .htmlacademy:active {
-    background: url(/img/logo-htmlacademyfocus.svg) no-repeat;
+    background-image: url(../img/logo-htmlacademyfocus.svg) no-repeat;
 }
 
 /* search-form */
@@ -498,7 +498,7 @@ margin:77px auto;
 
 
 .main-filter {
-    background:url(/img/search_filter.jpg); 
+    background:url(../img/search_filter.jpg); 
     background-color: var(--special-dark-blue);
     background-repeat:no-repeat;
     background-size: cover;

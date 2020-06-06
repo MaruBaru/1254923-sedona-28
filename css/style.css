@@ -1,6 +1,7 @@
 body {
     /* min-width: 768px; */
     width: 1200px;
+    height: 100%;
     padding: 0;
     margin: 0 auto;
     background-color:var(--basic-white);
@@ -53,7 +54,6 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 56px;
 }
 
 /* .main-contant, .catalog{
@@ -61,17 +61,16 @@ textarea:focus {
     outline-offset: -2px;
 } */
 
-/* .main-footer {
-} */
-
 .site-navigation {
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
+    width: 1055px;
     margin:0;
     padding: 0;
     justify-content: space-between;
     list-style: none;
+    height: 56px;
+    align-content: center;
     /* outline: 2px solid rgba(123, 255, 15, 0.5);
     outline-offset: -2px; */
 
@@ -80,7 +79,6 @@ textarea:focus {
 
 .site-navigation a {
     display: block;
-    padding: 25px 20px;
     color: var(--basic-black);
     font-size: 14px;
     line-height:26px;
@@ -305,20 +303,27 @@ margin:77px auto;
 .main-footer {
     background-color:var(--basic-white);
     opacity:0.9;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
     height: 120px;
-    margin: 0 47px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    width: 1055px;
 }
 
 .contacts{
+    display: block;
     font-size:21px;
     line-height:26px;
     font-weight:700;
-    text-align:center;
     color: var(--basic-black);
+    align-self:center;
 }
+
 .contacts a{
     color: var(--basic-black);
 }
@@ -326,23 +331,24 @@ margin:77px auto;
     margin-top:0px;
 }
 
-.social-group {
-    justify-self: center;
-}
 
-.site-htmlacademy{
+.social-group{
     display: flex;
-    width: 197px;
-    justify-self: end;
+    justify-self: center;
+    align-self:center;
 }
-
 .social {
     display: inline-block;
-    margin-right:6px;
     width: 46px;
     height: 48px;
+    margin: 0;
     background-color:var(--basic-blue);
     background-image: url(/img/Spritesocial.svg);
+}
+
+.social-group a:nth-child(2){
+    margin-right:6px;
+    margin-left: 6px;
 }
 
 .social-bth-tw{
@@ -361,6 +367,12 @@ margin:77px auto;
 /* Настроить прозрачность иконок */
 .social:focus{
     background-color: var(--special-extra-blue);
+}
+
+.site-htmlacademy{
+    justify-self: center;
+    align-self:center;
+    display: flex;
 }
 
 
@@ -389,12 +401,17 @@ margin:77px auto;
 
 /* search-form */
 
+.search{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 .search-form{
     background-color: var(--basic-white);
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2); ;
-
     position: absolute;
-    margin-left: 316px;
+    margin-top: 86px;
 ;
 }
 
@@ -487,18 +504,26 @@ margin:77px auto;
     background-size: cover;
     color: var(--basic-white);
     text-align:left;
+    min-height: 217px;
+    padding: 0 72px;
+
 }
 
-.main-filter{
-    padding:27px 72px 31px 72px;
-}
 
 .filter-form{
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
+.filter-wrap{
+    display: flex;
+}
+
+.filter-infrastructure{
+    width: 253px;
+}
 
 .main-filter legend {
     font-weight:700;
@@ -506,7 +531,14 @@ margin:77px auto;
 
 .main-filter ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+.main-filter li{
+    margin-top: 25px;
+}
+
 .main-filter fieldset {
     border: 0;
 }
@@ -580,14 +612,33 @@ margin:77px auto;
 
 /* sorting results */
 .sorting-results {
+    display: flex;
+    flex-direction: row;
     text-align: left;
     margin:0px 72px 0px 72px;
+    align-items: center;
+    justify-content: space-between;
+    height: 88px;
+}
+
+
+.sorting-item-wrap{
+    display: flex;
+    margin-left: 36px;
+}
+
+.sorting-find{
+    display:flex;
+    align-items: center;
+    
 }
 
 .sorting-results h2 {
     font-size:21px;
     line-height:26px;
     font-weight:700;
+    display: inline-block;
+    width: 127px;
 }
 
 .sorting-results ul {
@@ -595,6 +646,13 @@ margin:77px auto;
     font-size: 12px;
     line-height: 18px;
     display: flex;
+    padding: 0;
+    margin-left:40px;
+    margin-right: 46px;
+}
+
+.sorting-item li {
+    margin-right: 32px;
 }
 
 .sorting-item a {

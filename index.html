@@ -21,6 +21,7 @@
         <li>
           <a href="#!">Фото и видео</a>
         </li>
+        <li class="vissually-hidden"></li>
         <li>
           <a href="#!">Карта штата</a>
         </li>
@@ -51,8 +52,7 @@
           <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <div class="gallery">
-          <img src="img/realtown.jpg" width="800" height="256" alt="Изображение деревни"
-            aria-label="Изображение деревни">
+          <img src="img/realtown.jpg" alt="Изображение деревни" aria-label="Изображение деревни">
         </div>
       </section>
       <section class="main-contant-services">
@@ -74,8 +74,7 @@
       </section>
       <section class="main-contant-reason advantage">
         <div class="gallery">
-          <img src="img/devilsbridge.jpg" width="800" height="256" alt="Изображение мост дьявола"
-            aria-label="Изображение мост дьявола">
+          <img src="img/devilsbridge.jpg" alt="Изображение мост дьявола" aria-label="Изображение мост дьявола">
         </div>
         <div class="block blue">
           <h2>Там есть мост дьявола</h2>
@@ -104,61 +103,86 @@
     <section class="hotel-search">
       <h2>Заинтересовались?</h2>
       <p>
-        Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
+        Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
     </section>
-    <!-- <button class="button search-button" type="button">Поиск гостиницы в седоне</button> -->
     <section class="search">
       <button class="button search-button" type="button">Поиск гостиницы в седоне</button>
       <h2 class="visually-hidden">Поиск гостиницы</h2>
       <div class="search-form">
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <div class="arrival">
-            <label for="arrival">Дата заезда</label>
+            <label class="form-name" for="arrival">Дата заезда:</label>
             <input id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
             <div class="calendar" tabindex="0" aria-label="Календарь"></div>
           </div>
           <div class="departure">
-            <label for="departure">Дата выезда</label>
+            <label class="form-name" for="departure">Дата выезда:</label>
             <input id="departure" type="text" name="departure" placeholder="4 июля 2017" required>
             <div class="calendar" tabindex="0" aria-label="Календарь"></div>
           </div>
-          <div class="adults">
-            <label for="adults">Взрослые</label>
-            <input type="text" id="adults" name="adults" placeholder="2" required>
-            <div class="search-form-minus" tabindex="0" aria-label="Меньше"></div>
-            <div class="search-form-plus" tabindex="0" aria-label="Больше"></div>
-          </div>
-          <div class="children">
-            <label for="children">Дети</label>
-            <input type="text" id="children" name="children" placeholder="0">
-            <div class="search-form-minus" tabindex="0" aria-label="Меньше"></div>
-            <div class="search-form-plus" tabindex="0" aria-label="Больше"></div>
+          <div class="people">
+            <div class="adults">
+              <label class="form-name" for="adults">Взрослые:</label>
+              <input type="text" id="adults" name="adults" placeholder="2" required maxlength="3">
+              <div class="search-form-minus" tabindex="0" aria-label="Меньше">
+                <svg width="12" height="12">
+                  <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
+                </svg>
+              </div>
+              <div class="search-form-plus" tabindex="0" aria-label="Больше">
+                <svg width="12" height="12">
+                  <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
+                    stroke-width="1"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="children">
+              <label class="form-name-children" for="children">Дети:</label>
+              <input type="text" id="children" name="children" placeholder="0" maxlength="3">
+              <div class="search-form-minus" tabindex="0" aria-label="Меньше">
+                <svg width="12" height="12">
+                  <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
+                </svg>
+              </div>
+              <div class="search-form-plus" tabindex="0" aria-label="Больше">
+                <svg width="12" height="12">
+                  <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
+                    stroke-width="1"></polygon>
+                </svg>
+              </div>
+            </div>
           </div>
           <button class="button" type="submit">Найти</button>
         </form>
       </div>
-
     </section>
-    <div class="map">
+    <!-- <div class="map">
       <img src="img/map.png" alt="Карта Седона" tabindex="0">
-    </div>
+    </div> -->
+    <iframe class="map" id="map-canvas"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d700675.7519993621!2d-111.7612083283403!3d35.06792695753962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1591636148210!5m2!1sru!2sru"
+      width="100%" height="594" frameborder="0" style="border:0;" allowfullscreen title="Карта города Седона">
+    </iframe>
   </main>
   <footer class="main-footer">
-    <div class="footer">
-      <div class="contacts">
-        <a href="#!" aria-label="Инстаграм города Седона">#visitsedona</a>
-        <p>ТЕЛ: +7(495) 666-01-66</p>
+    <div class="footer-block">
+      <div class="footer">
+        <div class="contacts">
+          <a href="#!" aria-label="Инстаграм города Седона" target="_blank">#visitsedona</a>
+          <p>ТЕЛ: +7(495) 666-01-66</p>
+        </div>
+        <div class="social-group">
+          <a class="social social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"></a>
+          <a class="social social-bth-fb" href="https://www.facebook.com/" target="_blank" aria-label="facebook"></a>
+          <a class="social social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"></a>
+        </div>
+        <div class="site-htmlacademy">
+          <p>Website by</p>
+          <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank"></a>
+        </div>
       </div>
-      <div class="social-group">
-        <a class="social social-bth-tw" href="#!" aria-label="twitter"></a>
-        <a class="social social-bth-fb" href="#!" aria-label="facebook"></a>
-        <a class="social social-bth-yt" href="#!" aria-label="youTube"></a>
-      </div>
-      <div class="site-htmlacademy">
-        <p>Website by</p>
-        <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy"></a>
-      </div>
+      <div class="footer-wrap"></div>
     </div>
   </footer>
 </body>

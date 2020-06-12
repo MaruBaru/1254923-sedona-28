@@ -30,9 +30,21 @@ img {
 
 }
 
-.visually-hidden {
-  display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 
 input:focus,
 textarea:focus {
@@ -43,24 +55,13 @@ textarea:focus {
   background-color: var(--basic-extra-light);
 }
 
-/* .main-header {
-    outline: 2px solid rgba(255, 0, 0, 0.5);
-    outline-offset: -2px;
-} */
 .main-navigation {
-  /* outline: 5px solid rgba(0, 89, 255, 0.5);
-    outline-offset: -5px; */
   background-color: var(--basic-white);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* .main-contant, .catalog{
-    outline: 2px solid rgba(255, 0, 0, 0.5);
-    outline-offset: -2px;
-} */
 
 .site-navigation {
   display: flex;
@@ -72,9 +73,6 @@ textarea:focus {
   list-style: none;
   height: 56px;
   align-content: center;
-  /* outline: 2px solid rgba(123, 255, 15, 0.5);
-    outline-offset: -2px; */
-
 }
 
 .site-navigation a {
@@ -152,7 +150,6 @@ textarea:focus {
 }
 
 
-
 /* hero */
 
 .hero {
@@ -174,11 +171,6 @@ textarea:focus {
 .hero p {
   line-height: 26px;
 }
-
-/* .main-contant-reason, .main-contant-services{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}  */
 
 .main-contant-reason,
 .main-contant-services {
@@ -351,37 +343,23 @@ textarea:focus {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* background-color: var(--basic-white);
-  opacity: 0.9; */
+  background-color: rgba(255, 255, 255, 0.9);
   height: 120px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.footer-block {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* .footer-block {
   padding: 0 73px;
-}
+} */
 
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
-  width: 100%;
   z-index: 2;
-}
-
-.footer-wrap {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  height: 120px;
-  top: -33px;
-  z-index: 1;
+  padding: 0 73px;
 }
 
 .contacts {
@@ -602,6 +580,7 @@ textarea:focus {
   right: 0;
   margin-right: 9px;
   cursor: pointer;
+  outline: none;
 }
 
 .calendar:hover {
@@ -631,6 +610,7 @@ textarea:focus {
   top: 7px;
   padding: 0 13px;
   margin: 0 auto;
+  outline: none;
 }
 
 .search-form-minus line:hover {
@@ -649,24 +629,7 @@ textarea:focus {
 .search-form-plus polygon:focus {
   stroke: var(--basic-blue);
   fill: var(--basic-blue);
-
 }
-
-
-
-/* .search-form-minus {
-    background-image: url(../img/searchform.svg);
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-}
-.search-form-plus {
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/searchform.svg);
-    background-repeat: no-repeat; 
-} 
-*/
 
 
 /* page hotels */
@@ -686,29 +649,86 @@ textarea:focus {
   color: var(--basic-white);
   text-align: left;
   min-height: 217px;
-  padding: 0 72px;
-
+  display: flex;
 }
 
 
 .filter-form {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding: 0 73px;
 }
 
 .filter-wrap {
   display: flex;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.filter-infrastructure {
+.filter-wrap-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 160px;
+}
+
+.filter-infrastructure,
+.filter-housing {
   width: 253px;
 }
 
 .main-filter legend {
   font-weight: 700;
+  margin-bottom: 24px;
 }
+
+.main-filter label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 42px;
+}
+
+.filter-input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox :disabled+label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  opacity: 0.5;
+}
+
+
 
 .main-filter ul {
   list-style: none;
@@ -717,57 +737,140 @@ textarea:focus {
 }
 
 .main-filter li {
-  margin-top: 25px;
+  margin-bottom: 23px;
+}
+
+.main-filter li:last-child {
+  margin-bottom: 0;
 }
 
 .main-filter fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 0;
+  margin: 0;
+  padding: 0;
+  height: 160px;
 }
 
 
-/* cost */
 
-.main-filter-cost p {
+fieldset .filter-cost {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+.filter-cost p {
   font-size: 16px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .cost {
-  width: 224px;
+  width: 317px;
   height: 36px;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   text-align: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
 }
 
+.cost::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
 
-.cost input[type="number"] {
+.from,
+.before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cost input[type="text"] {
+  width: 50px;
+  /* как лучше отцентровать инпуты, убрав ширину?*/
   font: inherit;
   color: var(--basic-white);
   background: transparent;
   border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
-.cost svg {
-  fill: var(--basic-white);
+
+.from label,
+.before label {
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
 }
 
-/* .slider-line rect{
-    width:200px;
-    height:2px;
-    fill:var(--basic-white);
-} */
 
-.slider-button {
-  width: 19px;
+/* range-filter */
+
+.range-controls {
+  position: relative;
+  width: 317px;
+}
+
+.filter-slider {
+  height: 122px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 70%;
+  margin-left: 0;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.range-controls .toggle {
+  width: 21px;
   height: 21px;
+  padding: 0;
   background-image: url(../img/filter-button.svg);
   background-repeat: no-repeat;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  cursor: pointer;
+  outline: none;
 }
 
-.slider-button:hover {
-  width: 23px;
-  height: 24px;
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 70%;
+}
+
+.toggle:hover {
+  transform: scale(1.1)
 }
 
 /* main filter button */
@@ -857,13 +960,44 @@ textarea:focus {
   border: none;
 }
 
+.sorting-botton {
+  cursor: pointer;
+}
+
 .sorting {
-  outline: none;
-  background-image: url(../img/sorting.svg);
   background-color: transparent;
   border: none;
   width: 11px;
   height: 10px;
+}
+
+.sorting-up,
+.sorting-down {
+  background-image: url(../img/sorting.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  cursor: pointer;
+  margin: 6px;
+  outline: none;
+}
+
+.sorting-down {
+  transform: rotate(180deg);
+}
+
+.sorting-up:hover,
+.sorting-down:hover {
+  background-position: 0px -32px;
+}
+
+.sorting-up:focus,
+.sorting-down:focus {
+  background-position: 0px -66px;
+}
+
+.sorting-up:active,
+.sorting-down:active {
+  background-position: 0px -66px;
 }
 
 
@@ -880,12 +1014,9 @@ textarea:focus {
 }
 
 .hotel li {
-  /* display: flex;
-    flex-direction: row;
-    align-items:flex-start; */
   display: grid;
   height: 90px;
-  grid-template-columns: 164px 258px 1fr;
+  grid-template-columns: 164px 1fr 127px;
   align-items: center;
   padding: 30px 72px;
   border-bottom: 1px solid var(--special-silver);
@@ -1015,7 +1146,6 @@ textarea:focus {
   width: 100%;
   height: 120px;
   background-color: var(--basic-white);
-  border-top: 1px solid var(--special-silver);
 }
 
 :root {

@@ -36,7 +36,7 @@
     </nav>
     <div class="welcome-sedona">
       <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону">
-      <img class="mask" src="img/intro-mask.svg" alt="Маска для фонового изображения">
+      <div class="mask"> </div>
     </div>
   </header>
   <main class="main-contant">
@@ -113,24 +113,30 @@
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <div class="arrival">
             <label class="form-name" for="arrival">Дата заезда:</label>
-            <input id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
-            <div class="calendar" tabindex="0" aria-label="Календарь"></div>
+            <input class="arrival-form" id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
+            <div class="calendar" tabindex="0">
+              <p class="visually-hidden">Календарь</p>
+            </div>
           </div>
           <div class="departure">
             <label class="form-name" for="departure">Дата выезда:</label>
             <input id="departure" type="text" name="departure" placeholder="4 июля 2017" required>
-            <div class="calendar" tabindex="0" aria-label="Календарь"></div>
+            <div class="calendar" tabindex="0">
+              <p class="visually-hidden">Календарь</p>
+            </div>
           </div>
           <div class="people">
             <div class="adults">
               <label class="form-name" for="adults">Взрослые:</label>
               <input type="text" id="adults" name="adults" placeholder="2" required maxlength="3">
-              <div class="search-form-minus" tabindex="0" aria-label="Меньше">
+              <div class="search-form-minus" tabindex="0">
+                <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus" tabindex="0" aria-label="Больше">
+              <div class="search-form-plus" tabindex="0">
+                <p class="visually-hidden">Плюс</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
                     stroke-width="1"></polygon>
@@ -140,12 +146,14 @@
             <div class="children">
               <label class="form-name-children" for="children">Дети:</label>
               <input type="text" id="children" name="children" placeholder="0" maxlength="3">
-              <div class="search-form-minus" tabindex="0" aria-label="Меньше">
+              <div class="search-form-minus" tabindex="0">
+                <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus" tabindex="0" aria-label="Больше">
+              <div class="search-form-plus" tabindex="0">
+                <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
                     stroke-width="1"></polygon>
@@ -153,17 +161,16 @@
               </div>
             </div>
           </div>
-          <button class="button" type="submit">Найти</button>
+          <button class="button form-button" type="submit">Найти</button>
         </form>
       </div>
     </section>
-    <!-- <div class="map">
-      <img src="img/map.png" alt="Карта Седона" tabindex="0">
-    </div> -->
-    <iframe class="map" id="map-canvas"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d700675.7519993621!2d-111.7612083283403!3d35.06792695753962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1591636148210!5m2!1sru!2sru"
-      width="100%" height="594" frameborder="0" style="border:0;" allowfullscreen title="Карта города Седона">
-    </iframe>
+    <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d700675.7519993621!2d-111.7612083283403!3d35.06792695753962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1591636148210!5m2!1sru!2sru"
+      height="594" style="border:0;" allowfullscreen title="Карта города Седона">
+    </iframe> -->
+    <div id="map" class="map">
+      <p class="visually-hidden">Карта города Седона, штат Аризона</p>
+    </div>
   </main>
   <footer class="main-footer">
     <div class="footer">
@@ -172,9 +179,15 @@
         <p>ТЕЛ: +7(495) 666-01-66</p>
       </div>
       <div class="social-group">
-        <a class="social social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"></a>
-        <a class="social social-bth-fb" href="https://www.facebook.com/" target="_blank" aria-label="facebook"></a>
-        <a class="social social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"></a>
+        <div class="social">
+          <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"></a>
+        </div>
+        <div class="social">
+          <a class="social-bth-fb" href="https://www.facebook.com/" target="_blank" aria-label="facebook"></a>
+        </div>
+        <div class="social">
+          <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"></a>
+        </div>
       </div>
       <div class="site-htmlacademy">
         <p>Website by</p>
@@ -182,6 +195,12 @@
       </div>
     </div>
   </footer>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_UdA4J5tzDWXLEUgpUrDSy4XTGlGSVzk&callback=initMap"></script>
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

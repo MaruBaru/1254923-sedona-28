@@ -552,7 +552,7 @@ textarea:focus {
 
 .search-form-show {
   z-index: 4;
-  
+
 
 }
 
@@ -596,21 +596,37 @@ textarea:focus {
 
 
 @keyframes slidedown {
-  0% {transform: translateY(-369px);}
-  100% {transform: translateY(0px);}
+  0% {
+    transform: translateY(-369px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes slideup {
-  0% {transform: translateY(0px);}
-  100% {transform: translateY(-500px);}
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-500px);
+  }
 }
 
 @keyframes slideclose {
-  0% {z-index: 4;}
-  100% {z-index: 0;}
+  0% {
+    z-index: 4;
+  }
+
+  100% {
+    z-index: 0;
+  }
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);

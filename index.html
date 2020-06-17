@@ -30,17 +30,18 @@
         </li>
       </ul>
       <div class="main-logo">
-        <a href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона"
+        <a href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона" width="138px" height="70px"
             aria-label="Логотип города Седона"></a>
       </div>
     </nav>
-    <div class="welcome-sedona">
-      <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону">
-      <div class="mask"> </div>
-    </div>
   </header>
   <main class="main-contant">
     <section class="hero">
+      <div class="welcome-sedona">
+        <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону" width="457px"
+          height="351px">
+        <div class="mask"> </div>
+      </div>
       <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
@@ -52,32 +53,34 @@
           <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <div class="gallery">
-          <img src="img/realtown.jpg" alt="Изображение деревни" aria-label="Изображение деревни">
+          <img src="img/realtown.jpg" alt="Изображение деревни" aria-label="Изображение деревни" width="800px"
+            height="256px">
         </div>
       </section>
       <section class="main-contant-services">
         <div class=" block housing">
-          <img src="img/icon-house.svg" alt="Иконка жилье">
-          <h2><a href="#!">Жилье</a></h2>
+          <img src="img/icon-house.svg" alt="Иконка жилье" width="75px" height="72px">
+          <h2 class="services-head"><a href="#!">Жилье</a></h2>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </div>
         <div class="block food">
-          <img src="img/icon-food.svg" alt="Иконка еда">
-          <h2><a href="#!">Еда</a></h2>
+          <img src="img/icon-food.svg" alt="Иконка еда" width="75px" height="70px">
+          <h2 class="services-head"><a href="#!">Еда</a></h2>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="block souvenirs">
-          <img src="img/icon_souvenrs.svg" alt="Иконка сувениры">
-          <h2><a href="#!">Сувениры</a></h2>
+          <img src="img/icon_souvenrs.svg" alt="Иконка сувениры" width="64px" height="77px">
+          <h2 class="services-head"><a href="#!">Сувениры</a></h2>
           <p>Не только китайского, но и местного производства!</p>
         </div>
       </section>
       <section class="main-contant-reason advantage">
         <div class="gallery">
-          <img src="img/devilsbridge.jpg" alt="Изображение мост дьявола" aria-label="Изображение мост дьявола">
+          <img src="img/devilsbridge.jpg" alt="Изображение мост дьявола" aria-label="Изображение мост дьявола"
+            width="800px" height="256px">
         </div>
         <div class="block blue">
-          <h2>Там есть мост дьявола</h2>
+          <h2>Там есть <br>мост дьявола</h2>
           <span>-№2-</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
@@ -94,7 +97,7 @@
           <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
         </section>
         <section class="block wrap">
-          <h2>Мало туристов</h2>
+          <h2>Мало <br>туристов</h2>
           <span>-№5-</span>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </section>
@@ -107,10 +110,10 @@
       </p>
     </section>
     <section class="search">
-      <button class="button search-button" type="button">Поиск гостиницы в седоне</button>
+      <button class="button search-button" type="button" onclick="this.blur();">Поиск гостиницы в седоне</button>
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <div class="search-form">
-        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="search-form search-form-hidden ">
+        <form class="form form-close" action="https://echo.htmlacademy.ru" method="post">
           <div class="arrival">
             <label class="form-name" for="arrival">Дата заезда:</label>
             <input class="arrival-form" id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
@@ -165,9 +168,6 @@
         </form>
       </div>
     </section>
-    <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d700675.7519993621!2d-111.7612083283403!3d35.06792695753962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1591636148210!5m2!1sru!2sru"
-      height="594" style="border:0;" allowfullscreen title="Карта города Седона">
-    </iframe> -->
     <div id="map" class="map">
       <p class="visually-hidden">Карта города Седона, штат Аризона</p>
     </div>
@@ -175,23 +175,27 @@
   <footer class="main-footer">
     <div class="footer">
       <div class="contacts">
-        <a href="#!" aria-label="Инстаграм города Седона" target="_blank">#visitsedona</a>
-        <p>ТЕЛ: +7(495) 666-01-66</p>
+        <a href="#!" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona</a>
+        <a href="tel:84956660166" onclick="this.blur();">ТЕЛ: +7(495) 666-01-66</a>
       </div>
       <div class="social-group">
         <div class="social">
-          <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"></a>
+          <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"
+            onclick="this.blur();"></a>
         </div>
         <div class="social">
-          <a class="social-bth-fb" href="https://www.facebook.com/" target="_blank" aria-label="facebook"></a>
+          <a class="social-bth-fb" href="https://www.facebook.com/" target="_blank" aria-label="facebook"
+            onclick="this.blur();"></a>
         </div>
         <div class="social">
-          <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"></a>
+          <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"
+            onclick="this.blur();"></a>
         </div>
       </div>
       <div class="site-htmlacademy">
         <p>Website by</p>
-        <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank"></a>
+        <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank"
+          onclick="this.blur();"></a>
       </div>
     </div>
   </footer>

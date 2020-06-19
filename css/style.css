@@ -46,33 +46,35 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* input:focus,
-textarea:focus {
-  outline: none;
-} */
-
 .page {
   background-color: var(--basic-extra-light);
 }
 
+
+/* ====NAVIGATION===== */
 .main-navigation {
   background-color: var(--basic-white);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 73px;
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 1055px;
+  width: 100%;
   margin: 0;
   padding: 0;
   justify-content: space-between;
   list-style: none;
   height: 56px;
   align-content: center;
+}
+
+.site-navigation li:nth-of-type(3) {
+  margin: 0 70px;
 }
 
 .site-navigation a {
@@ -113,7 +115,7 @@ textarea:focus {
   transform: scale(1.05);
 }
 
-/* welcome sedona */
+/*=====HERO=====*/
 .welcome-sedona {
   display: flex;
   flex-wrap: wrap;
@@ -140,24 +142,6 @@ textarea:focus {
   vertical-align: bottom;
 }
 
-/* main-contant */
-.main-contant {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.contant-reason {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  align-content: flex-start;
-}
-
-
-/* hero */
 
 .hero {
   padding-bottom: 51px;
@@ -182,6 +166,23 @@ textarea:focus {
   line-height: 26px;
   margin: 44px 73px 0 73px;
 
+}
+
+
+/* =====MAIN-CONTANT===== */
+.main-contant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contant-reason {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .main-contant-reason,
@@ -344,6 +345,7 @@ textarea:focus {
 
 }
 
+/* ====MAP==== */
 .map {
   width: 100%;
   height: 594px;
@@ -356,7 +358,7 @@ textarea:focus {
 }
 
 
-/* footer */
+/*=====FOOTER==== */
 
 .main-footer {
   position: absolute;
@@ -379,6 +381,7 @@ textarea:focus {
   padding: 0 73px;
 }
 
+/* contacts */
 .contacts {
   display: flex;
   flex-direction: column;
@@ -411,7 +414,7 @@ textarea:focus {
   margin: 0px;
 }
 
-
+/* social-group */
 .social-group {
   width: 150px;
   display: flex;
@@ -467,7 +470,7 @@ textarea:focus {
   opacity: 0.3;
 }
 
-
+/* site-htmlacademy */
 .site-htmlacademy {
   justify-self: center;
   align-self: center;
@@ -502,7 +505,7 @@ textarea:focus {
   background-position: 0px 5px;
 }
 
-/* search-form */
+/* =====SEARCH-FORM===== */
 
 
 .search-button {
@@ -537,9 +540,8 @@ textarea:focus {
 .search-form {
   position: absolute;
   bottom: -395px;
-  width: 568px;
   height: 395px;
-  overflow-y: hidden;
+  overflow: hidden;
   z-index: 0;
 }
 
@@ -553,12 +555,10 @@ textarea:focus {
 .search-form-show {
   z-index: 4;
 
-
 }
 
-
 .modal-error {
-  outline: red 2px solid;
+  animation: shake 0.6s;
 }
 
 .form {
@@ -572,21 +572,27 @@ textarea:focus {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
 }
 
 .form-show {
-  animation: slidedown 1s;
+  animation: slidedown 0.6s;
   animation-fill-mode: forwards;
   opacity: 1;
 }
 
 
 .form-close {
-  animation: slideup 1s;
+  /* animation: slideup 0.6s;
+  animation-fill-mode: forwards; */
+  opacity: 0;
+}
+
+.form-hidden {
+  animation: slideup 0.6s;
   animation-fill-mode: forwards;
   opacity: 1;
 }
-
 
 .map-reverse {
   z-index: 5;
@@ -637,14 +643,14 @@ textarea:focus {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translateX(-5px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translateX(5px);
   }
 }
 
@@ -795,9 +801,9 @@ textarea:focus {
   margin-top: 54px;
 }
 
-/* page hotels */
+/* ======|=HOTELS=|===== */
 
-/* main filter */
+/* =====MAIN FILTER===== */
 
 .catalog {
   display: grid;
@@ -837,7 +843,7 @@ textarea:focus {
   flex-direction: column;
   height: 100%;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
 }
 
@@ -849,6 +855,7 @@ textarea:focus {
 .main-filter legend {
   font-weight: 700;
   margin-bottom: 24px;
+  font-size: 16px;
 }
 
 .main-filter label {
@@ -1059,7 +1066,7 @@ fieldset .filter-cost {
   background-image: none;
   background: transparent;
   background-color: transparent;
-  padding: 6px 35px 6px 35px;
+  padding: 6px 34px 6px 34px;
   cursor: pointer;
   margin-right: 8px;
 }
@@ -1069,7 +1076,7 @@ fieldset .filter-cost {
   background-color: var(--basic-white);
 }
 
-/* sorting results */
+/* ====SORTING RESULTS==== */
 .sorting-results {
   display: flex;
   flex-direction: row;
@@ -1192,7 +1199,7 @@ fieldset .filter-cost {
 }
 
 
-/* results */
+/*====RESULTS==== */
 .results {
   background-color: var(--basic-white);
   text-align: left;
@@ -1253,7 +1260,7 @@ fieldset .filter-cost {
 }
 
 .rating p {
-  width: 110px;
+  padding: 0 14px;
   line-height: 27px;
   margin: 0;
   background-color: var(--basic-light-grey);
@@ -1271,8 +1278,8 @@ fieldset .filter-cost {
 }
 
 .item-info h3 {
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .item-info p {
@@ -1302,7 +1309,7 @@ fieldset .filter-cost {
   font-weight: 700;
   color: var(--basic-white);
   text-align: center;
-  min-width: 110px;
+  padding: 0 16px;
   line-height: 27px;
   margin-right: 6px;
 }
@@ -1339,7 +1346,7 @@ fieldset .filter-cost {
 }
 
 .rating span {
-  padding-left: 3px;
+  padding-left: 5px;
 }
 
 .stub {

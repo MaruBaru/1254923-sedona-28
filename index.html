@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <!-- <link rel="stylesheet" href="css/style.min.css"> -->
 </head>
 
@@ -16,17 +17,17 @@
     <nav class="main-navigation">
       <ul class="site-navigation">
         <li>
-          <a href="#!">Информация</a>
+          <a href="#!" onclick="this.blur();">Информация</a>
         </li>
         <li>
-          <a href="#!">Фото и видео</a>
+          <a href="#!" onclick="this.blur();">Фото и видео</a>
         </li>
         <li class="vissually-hidden"></li>
         <li>
-          <a href="#!">Карта штата</a>
+          <a href="#!" onclick="this.blur();">Карта штата</a>
         </li>
         <li>
-          <a href="hotels.html">Гостиницы</a>
+          <a href="hotels.html" onclick="this.blur();">Гостиницы</a>
         </li>
       </ul>
       <div class="main-logo">
@@ -49,7 +50,7 @@
       <section class="main-contant-reason advantage">
         <div class="block blue">
           <h2>Настоящий городок</h2>
-          <span>-№1-</span>
+          <span>- №1 -</span>
           <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <div class="gallery">
@@ -60,17 +61,17 @@
       <section class="main-contant-services">
         <div class=" block housing">
           <img src="img/icon-house.svg" alt="Иконка жилье" width="75px" height="72px">
-          <h2 class="services-head"><a href="#!">Жилье</a></h2>
+          <h2 class="services-head"><a href="#!" onclick="this.blur();">Жилье</a></h2>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </div>
         <div class="block food">
           <img src="img/icon-food.svg" alt="Иконка еда" width="75px" height="70px">
-          <h2 class="services-head"><a href="#!">Еда</a></h2>
+          <h2 class="services-head"><a href="#!" onclick="this.blur();">Еда</a></h2>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="block souvenirs">
           <img src="img/icon_souvenrs.svg" alt="Иконка сувениры" width="64px" height="77px">
-          <h2 class="services-head"><a href="#!">Сувениры</a></h2>
+          <h2 class="services-head"><a href="#!" onclick="this.blur();">Сувениры</a></h2>
           <p>Не только китайского, но и местного производства!</p>
         </div>
       </section>
@@ -81,24 +82,24 @@
         </div>
         <div class="block blue">
           <h2>Там есть <br>мост дьявола</h2>
-          <span>-№2-</span>
+          <span>- №2 -</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </section>
       <div class="main-contant-reason">
         <section class="block wrap">
           <h2>Небольшая площадь</h2>
-          <span>-№3-</span>
+          <span>- №3 -</span>
           <p>Все достопримечательности находятся очень близко</p>
         </section>
         <section class="block wrap">
           <h2>Красивая дорога</h2>
-          <span>-№4-</span>
+          <span>- №4 -</span>
           <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
         </section>
         <section class="block wrap">
           <h2>Мало <br>туристов</h2>
-          <span>-№5-</span>
+          <span>- №5 -</span>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </section>
       </div>
@@ -112,8 +113,8 @@
     <section class="search">
       <button class="button search-button" type="button" onclick="this.blur();">Поиск гостиницы в седоне</button>
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <div class="search-form search-form-hidden ">
-        <form class="form form-close" action="https://echo.htmlacademy.ru" method="post">
+      <div class="search-form search-form-show">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <div class="arrival">
             <label class="form-name" for="arrival">Дата заезда:</label>
             <input class="arrival-form" id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
@@ -123,7 +124,8 @@
           </div>
           <div class="departure">
             <label class="form-name" for="departure">Дата выезда:</label>
-            <input id="departure" type="text" name="departure" placeholder="4 июля 2017" required>
+            <input class="departure-form" id="departure" type="text" name="departure" placeholder="4 июля 2017"
+              required>
             <div class="calendar" tabindex="0">
               <p class="visually-hidden">Календарь</p>
             </div>
@@ -131,14 +133,14 @@
           <div class="people">
             <div class="adults">
               <label class="form-name" for="adults">Взрослые:</label>
-              <input type="text" id="adults" name="adults" placeholder="2" required maxlength="3">
-              <div class="search-form-minus" tabindex="0">
+              <input class="form-adults" type="text" id="adults" name="adults" placeholder="2" maxlength="3" required>
+              <div class="search-form-minus min-adults" tabindex="0">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus" tabindex="0">
+              <div class="search-form-plus plus-adults" tabindex="0">
                 <p class="visually-hidden">Плюс</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
@@ -148,14 +150,14 @@
             </div>
             <div class="children">
               <label class="form-name-children" for="children">Дети:</label>
-              <input type="text" id="children" name="children" placeholder="0" maxlength="3">
-              <div class="search-form-minus" tabindex="0">
+              <input class="form-children" type="text" id="children" name="children" placeholder="0" maxlength="3">
+              <div class="search-form-minus min-children" tabindex="0">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus" tabindex="0">
+              <div class="search-form-plus plus-children" tabindex="0">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
@@ -164,7 +166,7 @@
               </div>
             </div>
           </div>
-          <button class="button form-button" type="submit">Найти</button>
+          <button class="button form-button" type="submit" onclick="this.blur();">Найти</button>
         </form>
       </div>
     </section>
@@ -176,7 +178,7 @@
     <div class="footer">
       <div class="contacts">
         <a href="#!" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona</a>
-        <a href="tel:84956660166" onclick="this.blur();">ТЕЛ: +7(495) 666-01-66</a>
+        <a href="tel:+74956660166" onclick="this.blur();">ТЕЛ: +7(495) 666-01-66</a>
       </div>
       <div class="social-group">
         <div class="social">

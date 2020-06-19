@@ -2,12 +2,7 @@ var searchBottom = document.querySelector(".search-button");
 var searchForm = document.querySelector(".form");
 var searchBlock = document.querySelector(".search-form");
 
-var formArrival = searchForm.querySelector("[name=arrival]");
-var formDeparture = searchForm.querySelector("[name=departure]");
-var formAdults = searchForm.querySelector("[name=adults]");
-var formChildren = searchForm.querySelector("[name=children]");
-
-// Проверка Local Srorage
+//===== Проверка Local Srorage=====
 
 var isStorageSupport = true;
 var storage = "";
@@ -18,17 +13,31 @@ try {
 }
 
 
-// Открытие и закрытие вплывающиего окна на главной странице
+//===== Открытие и закрытие модального окна на главной странице=====
 
-searchBottom.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  searchForm.classList.toggle("form-close");
-  searchForm.classList.toggle("form-show");
-  searchBlock.classList.toggle("search-form-hidden");
-  searchBlock.classList.toggle("search-form-show");
-});
+if (searchBottom && searchForm){
+  // модальное окно закрыто по умолчанию
+  searchForm.classList.add("form-close");
+  searchBlock.classList.remove("search-form-show");
+  searchBlock.classList.add("search-form-hidden");
 
-// Закрытие всплывающего окна по Esc 
+  searchBottom.addEventListener("click", function (evt) {
+    // при нажатии на кнопку отключаем  класс закрытого модального окна
+    if(searchForm.classList.contains("form-close")) {
+      searchForm.classList.remove("form-close");
+      searchForm.classList.add("form-hidden");
+    }
+
+    // переключаем классы с анимацией  выезда модального окна
+    evt.preventDefault();
+    searchForm.classList.toggle("form-hidden");
+    searchForm.classList.toggle("form-show");
+    searchBlock.classList.toggle("search-form-hidden");
+    searchBlock.classList.toggle("search-form-show");
+   });
+}
+
+//===== Закрытие всплывающего окна по Esc =====
 
 document.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -44,27 +53,65 @@ document.addEventListener("keydown", function (evt) {
 
 
 
-// Проверка формы
+//===== Проверка формы=====
 
-searchForm.addEventListener("submit", function (evt) {
-  if (!formArrival.value || !formDeparture.value || !formAdults.value) {
+var formArrival = searchForm.querySelector(".arrival-form");
+var formDeparture = searchForm.querySelector(".departure-form");
+var formAdults = searchForm.querySelector(".form-adults");
+var formChildren = searchForm.querySelector(".form-children");
+
+if (searchForm){
+  // удалила атрибут проверки, т.к с ним моя форма не трясется
+  formArrival.removeAttribute('required');
+  formDeparture.removeAttribute('required');
+  formAdults.removeAttribute('required');
+
+  searchForm.addEventListener("submit", function (evt) {
+  if (!formArrival.value || !formDeparture.value || !formAdults.value || formAdults.value<=0) {
+    // если форма не заполнена- добавляем анимацию ошибки формы
     evt.preventDefault();
-    formArrival.classList.add('modal-error');
-    formDeparture.classList.add('modal-error');
-    formAdults.classList.add('modal-error')
+    searchForm.classList.remove("form-show");
+    searchForm.classList.remove("modal-error");
+    searchForm.offsetWidth = searchForm.offsetWidth;
+    searchForm.classList.add("modal-error");
 
- }
-   else { 
-    if (isStorageSupport){
-      localStorage.setItem("arrival]", formArrival.value);
-      localStorage.setItem("departure]", formDeparture.value);
-      localStorage.setItem("adults]", formAdults.value);
+
+    // Подсветка input, если неправильно
+    if (!formArrival.value){
+      formArrival.style.outline = "1px solid #766357";
     }
- }
+    else {
+      formArrival.removeAttribute("style");
+    }
+
+    if (!formDeparture.value){
+      formDeparture.style.outline = "1px solid #766357";
+    }
+    else {
+      formDeparture.removeAttribute("style");
+    }
+
+    if (!formAdults.value || formAdults.value<=0 ){
+      formAdults.style.outline = "1px solid #766357";
+    }
+    else {
+      formAdults.removeAttribute("style");
+    }
+  }   
+  else {
+    if (isStorageSupport) {
+      localStorage.setItem("arrival", formArrival.value);
+      localStorage.setItem("departure", formDeparture.value);
+      localStorage.setItem("adults", formAdults.value);
+    }
+  }
 });
+}
 
 
-// Добавление карты
+
+
+//====== Добавление карты ======
 
 function initMap() {
     var element = document.getElementById('map');
@@ -73,13 +120,13 @@ function initMap() {
         center: {lat: 34.831793, lng: -111.762655},
         zoomControl: true,
         zoomControlOptions: {
-          position: google.maps.ControlPosition.LEFT_TOP
+          position: google.maps.ControlPosition.RIGHT_TOP
         },
         streetViewControl: true,
         streetViewControlOptions: {
           position: google.maps.ControlPosition.RIGHT_TOP
         },
-        mapTypeId: google.maps.MapTypeId.HYBRID,
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
     };
     map = new google.maps.Map(element, options);
 
@@ -88,3 +135,40 @@ function initMap() {
     map: map,
     });
 }
+
+// ======счетчик + и - ====
+
+var buttonMinusAdl = document.querySelector(".min-adults");
+var buttonPlusAdl = document.querySelector(".plus-adults");
+var buttonMinusChild = document.querySelector(".min-children");
+var buttonPlusChild = document.querySelector(".plus-children");
+
+buttonMinusAdl.addEventListener("click", function (evt) {
+  if(formAdults.value>0) {
+   formAdults.value--;
+  }
+  
+});
+
+buttonPlusAdl.addEventListener("click", function (evt) {
+  if(formAdults.value>=0) {
+   formAdults.value++;
+  }
+  
+});
+
+buttonMinusChild.addEventListener("click", function (evt) {
+  if(formChildren.value>0) {
+   formChildren.value--;
+  }
+  
+});
+
+buttonPlusChild.addEventListener("click", function (evt) {
+  if(formChildren.value>=0) {
+   formChildren.value++;
+  }
+  
+});
+
+

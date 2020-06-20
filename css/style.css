@@ -272,14 +272,14 @@ input[type="radio"].visually-hidden {
   width: 75px;
   height: 75px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: flex-end;
 }
 
-.icon img{
-height: 100%;
-width: 100%;
-object-fit: contain;
+.icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 

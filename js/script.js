@@ -27,7 +27,14 @@ if (searchBottom && searchForm){
       searchForm.classList.remove("form-close");
       searchForm.classList.add("form-hidden");
     }
-
+        // удалить анимацию ошибки
+    if(searchForm.classList.contains("modal-error")) {
+      searchForm.classList.remove("modal-error");
+      formArrival.style.outline = "none";
+      formDeparture.style.outline = "none";
+      formAdults.style.outline = "none";
+      searchForm.classList.add("form-show");
+    }
     // переключаем классы с анимацией  выезда модального окна
     evt.preventDefault();
     searchForm.classList.toggle("form-hidden");
@@ -41,13 +48,20 @@ if (searchBottom && searchForm){
 
 document.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-      evt.preventDefault();
       if (searchForm.classList.contains("form-show")) {
       searchForm.classList.remove("form-show");
-      searchForm.classList.add("form-close");
+      searchForm.classList.add("form-hidden");
+      }
+      if (searchForm.classList.contains("modal-error")) {
+        searchForm.classList.remove("modal-error");
+        searchForm.classList.add("form-hidden");
+        formArrival.style.outline = "none";
+        formDeparture.style.outline = "none";
+        formAdults.style.outline = "none";
+        }
+      evt.preventDefault();
       searchBlock.classList.toggle("search-form-hidden");
       searchBlock.classList.toggle("search-form-show");
-      }
     }
 });
 
@@ -81,21 +95,22 @@ if (searchForm){
       formArrival.style.outline = "1px solid #766357";
     }
     else {
-      formArrival.removeAttribute("style");
+      formArrival.style.outline = "none";
+   
     }
 
     if (!formDeparture.value){
       formDeparture.style.outline = "1px solid #766357";
     }
     else {
-      formDeparture.removeAttribute("style");
+      formDeparture.style.outline = "none";
     }
 
     if (!formAdults.value || formAdults.value<=0 ){
       formAdults.style.outline = "1px solid #766357";
     }
     else {
-      formAdults.removeAttribute("style");
+      formAdults.style.outline = "none";
     }
   }   
   else {

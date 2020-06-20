@@ -31,7 +31,7 @@
         </li>
       </ul>
       <div class="main-logo">
-        <a href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона" width="138px" height="70px"
+        <a href="index.html"> <img src="img/logo_sedona.svg" alt="Логотип Седона" width="138" height="70"
             aria-label="Логотип города Седона"></a>
       </div>
     </nav>
@@ -39,8 +39,8 @@
   <main class="main-contant">
     <section class="hero">
       <div class="welcome-sedona">
-        <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону" width="457px"
-          height="351px">
+        <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону" width="457"
+          height="351">
         <div class="mask"> </div>
       </div>
       <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -54,23 +54,29 @@
           <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <div class="gallery">
-          <img src="img/realtown.jpg" alt="Изображение деревни" aria-label="Изображение деревни" width="800px"
-            height="256px">
+          <img src="img/realtown.jpg" alt="Изображение деревни" aria-label="Изображение деревни" width="800"
+            height="256">
         </div>
       </section>
       <section class="main-contant-services">
         <div class=" block housing">
-          <img src="img/icon-house.svg" alt="Иконка жилье" width="75px" height="72px">
+          <div class="icon">
+           <img src="img/icon-house.svg" alt="Иконка жилье" width="75" height="72">
+          </div>
           <h2 class="services-head"><a href="#!" onclick="this.blur();">Жилье</a></h2>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </div>
         <div class="block food">
-          <img src="img/icon-food.svg" alt="Иконка еда" width="75px" height="70px">
+          <div class="icon">
+           <img src="img/icon-food.svg" alt="Иконка еда" width="75" height="70">
+          </div>
           <h2 class="services-head"><a href="#!" onclick="this.blur();">Еда</a></h2>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="block souvenirs">
-          <img src="img/icon_souvenrs.svg" alt="Иконка сувениры" width="64px" height="77px">
+          <div class="icon">
+           <img src="img/icon_souvenrs.svg" alt="Иконка сувениры" width="64" height="77">
+          </div>
           <h2 class="services-head"><a href="#!" onclick="this.blur();">Сувениры</a></h2>
           <p>Не только китайского, но и местного производства!</p>
         </div>
@@ -78,7 +84,7 @@
       <section class="main-contant-reason advantage">
         <div class="gallery">
           <img src="img/devilsbridge.jpg" alt="Изображение мост дьявола" aria-label="Изображение мост дьявола"
-            width="800px" height="256px">
+            width="800" height="256">
         </div>
         <div class="block blue">
           <h2>Там есть <br>мост дьявола</h2>
@@ -118,7 +124,7 @@
           <div class="arrival">
             <label class="form-name" for="arrival">Дата заезда:</label>
             <input class="arrival-form" id="arrival" type="text" name="arrival" placeholder="20 апреля 2017" required>
-            <div class="calendar" tabindex="0">
+            <div class="calendar" tabindex="0" onclick="this.blur();">
               <p class="visually-hidden">Календарь</p>
             </div>
           </div>
@@ -126,7 +132,7 @@
             <label class="form-name" for="departure">Дата выезда:</label>
             <input class="departure-form" id="departure" type="text" name="departure" placeholder="4 июля 2017"
               required>
-            <div class="calendar" tabindex="0">
+            <div class="calendar" tabindex="0" onclick="this.blur();">
               <p class="visually-hidden">Календарь</p>
             </div>
           </div>
@@ -134,13 +140,13 @@
             <div class="adults">
               <label class="form-name" for="adults">Взрослые:</label>
               <input class="form-adults" type="text" id="adults" name="adults" placeholder="2" maxlength="3" required>
-              <div class="search-form-minus min-adults" tabindex="0">
+              <div class="search-form-minus min-adults" tabindex="0" onclick="this.blur();">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus plus-adults" tabindex="0">
+              <div class="search-form-plus plus-adults" tabindex="0" onclick="this.blur();">
                 <p class="visually-hidden">Плюс</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"
@@ -150,14 +156,14 @@
             </div>
             <div class="children">
               <label class="form-name-children" for="children">Дети:</label>
-              <input class="form-children" type="text" id="children" name="children" placeholder="0" maxlength="3">
-              <div class="search-form-minus min-children" tabindex="0">
+              <input class="form-children" type="text" id="children" name="children" placeholder="0" maxlength="3" >
+              <div class="search-form-minus min-children" tabindex="0" onclick="this.blur();">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <line x1="0" y1="6" x2="12" y2="6" stroke="#a9a9a9" stroke-width="3"></line>
                 </svg>
               </div>
-              <div class="search-form-plus plus-children" tabindex="0">
+              <div class="search-form-plus plus-children" tabindex="0" onclick="this.blur();">
                 <p class="visually-hidden">Минус</p>
                 <svg width="12" height="12">
                   <polygon points="0,5 5,5 5,0 7,0 7,5 12,5 12,7 7,7 7,12 5,12 5,7 0,7 " fill="#a9a9a9" stroke="#a9a9a9"

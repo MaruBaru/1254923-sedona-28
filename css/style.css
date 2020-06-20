@@ -268,6 +268,21 @@ input[type="radio"].visually-hidden {
   padding-top: 28px;
 }
 
+.icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+}
+
+.icon img{
+height: 100%;
+width: 100%;
+object-fit: contain;
+}
+
+
 .blue {
   background-color: var(--basic-blue);
   color: var(--basic-white);
@@ -576,7 +591,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-show {
-  animation: slidedown 0.6s;
+  animation: slidedown 0.5s;
   animation-fill-mode: forwards;
   opacity: 1;
 }
@@ -589,7 +604,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-hidden {
-  animation: slideup 0.6s;
+  animation: slideup 0.5s;
   animation-fill-mode: forwards;
   opacity: 1;
 }
@@ -712,7 +727,6 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
   outline: 2px solid var(--special-silver);
 }
-
 
 .people input[type="text"] {
   width: 114px;

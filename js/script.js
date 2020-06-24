@@ -14,18 +14,15 @@ try {
 
 
 //===== Открытие и закрытие модального окна на главной странице=====
-
 if (searchBottom && searchForm){
-  // модальное окно закрыто по умолчанию
-  searchForm.classList.add("form-close");
-  searchBlock.classList.remove("search-form-show");
-  searchBlock.classList.add("search-form-hidden");
-
+  // модальное окно открыто по умолчанию
+  searchForm.classList.add("form-open");
+  searchBlock.classList.add("search-form-show");
   searchBottom.addEventListener("click", function (evt) {
-    // при нажатии на кнопку отключаем  класс закрытого модального окна
-    if(searchForm.classList.contains("form-close")) {
-      searchForm.classList.remove("form-close");
-      searchForm.classList.add("form-hidden");
+    // при нажатии на кнопку переключаем класс открытого модального окна на модальное окно с анимацией выезда
+    if(searchForm.classList.contains("form-open")) {
+      searchForm.classList.remove("form-open");
+      searchForm.classList.add("form-show");
     }
         // удалить анимацию ошибки
     if(searchForm.classList.contains("modal-error")) {
@@ -35,7 +32,7 @@ if (searchBottom && searchForm){
       formAdults.style.outline = "none";
       searchForm.classList.add("form-show");
     }
-    // переключаем классы с анимацией  выезда модального окна
+    //открытие закрытие модального окна
     evt.preventDefault();
     searchForm.classList.toggle("form-hidden");
     searchForm.classList.toggle("form-show");
@@ -52,13 +49,17 @@ document.addEventListener("keydown", function (evt) {
       searchForm.classList.remove("form-show");
       searchForm.classList.add("form-hidden");
       }
+      if (searchForm.classList.contains("form-open")) {
+        searchForm.classList.remove("form-open");
+        searchForm.classList.add("form-hidden");
+        }
       if (searchForm.classList.contains("modal-error")) {
         searchForm.classList.remove("modal-error");
         searchForm.classList.add("form-hidden");
         formArrival.style.outline = "none";
         formDeparture.style.outline = "none";
         formAdults.style.outline = "none";
-        }
+      }
       evt.preventDefault();
       searchBlock.classList.toggle("search-form-hidden");
       searchBlock.classList.toggle("search-form-show");
@@ -68,7 +69,6 @@ document.addEventListener("keydown", function (evt) {
 
 
 //===== Проверка формы=====
-
 var formArrival = searchForm.querySelector(".arrival-form");
 var formDeparture = searchForm.querySelector(".departure-form");
 var formAdults = searchForm.querySelector(".form-adults");
@@ -79,7 +79,6 @@ if (searchForm){
   formArrival.removeAttribute('required');
   formDeparture.removeAttribute('required');
   formAdults.removeAttribute('required');
-
   searchForm.addEventListener("submit", function (evt) {
   if (!formArrival.value || !formDeparture.value || !formAdults.value || formAdults.value<=0) {
     // если форма не заполнена- добавляем анимацию ошибки формы
@@ -96,16 +95,13 @@ if (searchForm){
     }
     else {
       formArrival.style.outline = "none";
-   
     }
-
     if (!formDeparture.value){
       formDeparture.style.outline = "1px solid #766357";
     }
     else {
       formDeparture.style.outline = "none";
     }
-
     if (!formAdults.value || formAdults.value<=0 ){
       formAdults.style.outline = "1px solid #766357";
     }
@@ -144,7 +140,6 @@ function initMap() {
         mapTypeId: google.maps.MapTypeId.TERRAIN,
     };
     map = new google.maps.Map(element, options);
-
     marker = new google.maps.Marker({
     position: new google.maps.LatLng(34.869977, -111.760947),
     map: map,
@@ -160,30 +155,30 @@ var buttonPlusChild = document.querySelector(".plus-children");
 
 buttonMinusAdl.addEventListener("click", function (evt) {
   if(formAdults.value>0) {
+   evt.preventDefault();
    formAdults.value--;
   }
-  
 });
 
 buttonPlusAdl.addEventListener("click", function (evt) {
   if(formAdults.value>=0) {
+   evt.preventDefault();
    formAdults.value++;
   }
-  
 });
 
 buttonMinusChild.addEventListener("click", function (evt) {
   if(formChildren.value>0) {
+   evt.preventDefault();
    formChildren.value--;
   }
-  
 });
 
 buttonPlusChild.addEventListener("click", function (evt) {
   if(formChildren.value>=0) {
+   evt.preventDefault();
    formChildren.value++;
   }
-  
 });
 
 

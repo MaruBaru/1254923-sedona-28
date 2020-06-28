@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   </head>
   <body class="page-body">
@@ -18,6 +18,9 @@
           </li>
           <li class="navigation-item">
             <a href="#!" onclick="this.blur();">Фото и видео</a>
+          </li>
+          <li class="navigation-item">
+            <span class="visually-hidden">Логотип</span>
           </li>
           <li class="navigation-item">
             <a href="#!" onclick="this.blur();">Карта штата</a>
@@ -40,18 +43,15 @@
               <legend>Инфраструктура:</legend>
               <ul>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool"
-                    id="main-filter-pool" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="main-filter-pool" checked>
                   <label for="main-filter-pool">бассейн</label>
                 </li>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking"
-                    id="main-filter-parking">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="main-filter-parking">
                   <label for="main-filter-parking">парковка</label>
                 </li>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi"
-                    id="main-filter-wi-fi">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="main-filter-wi-fi">
                   <label for="main-filter-wi-fi">wi-fi</label>
                 </li>
               </ul>
@@ -60,18 +60,15 @@
               <legend>Тип жилья:</legend>
               <ul>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel"
-                    id="main-filter-hotel" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="main-filter-hotel" checked>
                   <label for="main-filter-hotel">гостиница</label>
                 </li>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel"
-                    id="main-filter-motel" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="main-filter-motel" checked>
                   <label for="main-filter-motel">мотель</label>
                 </li>
                 <li>
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments"
-                    id="main-filter-apartments" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments" id="main-filter-apartments" checked>
                   <label for="main-filter-apartments">апартаменты</label>
                 </li>
               </ul>
@@ -132,7 +129,7 @@
       <section class="results">
         <ul class="item hotel">
           <li>
-            <img class="item-gallery" src="img/amararesortspa.jpg" alt="Amara Resort & Spa" width="135" height="90">
+            <img class="item-gallery" src="img/amararesortspa.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
             <div class="item-info">
               <a href="#!">
                 <h3>Amara Resort & Spa</h3>
@@ -150,22 +147,22 @@
               <fieldset class="stars">
                 <legend class="visually-hidden">Рейтинг</legend>
                 <div class="rating-group">
-                    <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-1" value="1">
-                    <label class="rating-star" for="amararesortspa-1" aria-label="Ужасно"></label>
-                    <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-2" value="2">
-                    <label class="rating-star" for="amararesortspa-2" aria-label="Сносно"></label>
-                    <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-3" value="3">
-                    <label class="rating-star" for="amararesortspa-3" aria-label="Нормально"></label>
-                    <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-4" value="4" checked>
-                    <label class="rating-star" for="amararesortspa-4" aria-label="Хорошо"></label>
-                    <div class="rating-focus"></div>
+                  <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-1" value="1">
+                  <label class="rating-star" for="amararesortspa-1" aria-label="Рейтинг. 1 звезда"></label>
+                  <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-2" value="2">
+                  <label class="rating-star" for="amararesortspa-2" aria-label="Рейтинг. 2 звезды"></label>
+                  <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-3" value="3">
+                  <label class="rating-star" for="amararesortspa-3" aria-label="Рейтинг. 3 звезды"></label>
+                  <input class="rating-input" type="radio" name="amararesortspa" id="amararesortspa-4" value="4" checked>
+                  <label class="rating-star" for="amararesortspa-4" aria-label="Рейтинг. 4 звезды"></label>
+                  <div class="rating-focus"></div>
                 </div>
-            </fieldset>
+              </fieldset>
               <p>Рейтинг<span>8.5</span></p>
             </div>
           </li>
           <li>
-            <img class="item-gallery" src="img/desertquailinn.jpg" alt="Desert Quail Inn" width="135" height="90">
+            <img class="item-gallery" src="img/desertquailinn.jpg" alt="Мотель Desert Quail Inn" width="135" height="90">
             <div class="item-info">
               <a href="#!">
                 <h3>Desert Quail Inn</h3>
@@ -181,25 +178,24 @@
             </div>
             <div class="rating">
               <fieldset class="stars">
-                <legend class="visually-hidden">Рейтинг</legend>
+                <legend class="visually-hidden">Рейтинг </legend>
                 <div class="rating-group">
-                    <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-1" value="1">
-                    <label class="rating-star" for="desertquailinn-1" aria-label="Ужасно"></label>
-                    <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-2" value="2">
-                    <label class="rating-star" for="desertquailinn-2" aria-label="Сносно"></label>
-                    <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-3" value="3" checked>
-                    <label class="rating-star" for="desertquailinn-3" aria-label="Нормально"></label>
-                    <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-4" value="4" disabled>
-                    <label class="rating-star" for="desertquailinn-4" aria-label="Хорошо"></label>
-                    <div class="rating-focus"></div>
+                  <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-1" value="1">
+                  <label class="rating-star" for="desertquailinn-1" aria-label="Рейтинг. 1 звезда"></label>
+                  <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-2" value="2">
+                  <label class="rating-star" for="desertquailinn-2" aria-label="Рейтинг. 2 звезды"></label>
+                  <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-3" value="3" checked>
+                  <label class="rating-star" for="desertquailinn-3" aria-label="Рейтинг. 3 звезды"></label>
+                  <input class="rating-input" type="radio" name="desertquailinn" id="desertquailinn-4" value="4" disabled>
+                  <label class="rating-star" for="desertquailinn-4" aria-label="Рейтинг. 4 звезды"></label>
+                  <div class="rating-focus"></div>
                 </div>
-            </fieldset>
+              </fieldset>
               <p>Рейтинг<span>8.9</span></p>
             </div>
           </li>
           <li>
-            <img class="item-gallery" src="img/villasatpocodiablo.jpg" alt="Villas at Poco Diablo" width="135"
-              height="90">
+            <img class="item-gallery" src="img/villasatpocodiablo.jpg" alt="Апартаменты Villas at Poco Diablo" width="135" height="90">
             <div class="item-info">
               <a href="#!">
                 <h3>Villas at Poco Diablo</h3>
@@ -217,17 +213,17 @@
               <fieldset class="stars">
                 <legend class="visually-hidden">Рейтинг</legend>
                 <div class="rating-group">
-                    <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-1" value="1">
-                    <label class="rating-star" for="villasatpocodiablo-1" aria-label="Ужасно"></label>
-                    <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-2" value="2" checked>
-                    <label class="rating-star" for="villasatpocodiablo-2" aria-label="Сносно"></label>
-                    <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-3" value="3" disabled>
-                    <label class="rating-star" for="villasatpocodiablo-3" aria-label="Нормально"></label>
-                    <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablor-4" value="4" disabled>
-                    <label class="rating-star" for="villasatpocodiablo-4" aria-label="Хорошо"></label>
-                    <div class="rating-focus"></div>
+                  <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-1" value="1">
+                  <label class="rating-star" for="villasatpocodiablo-1" aria-label="Рейтинг. 1 звезда"></label>
+                  <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-2" value="2" checked>
+                  <label class="rating-star" for="villasatpocodiablo-2" aria-label="Рейтинг. 2 звезды"></label>
+                  <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablo-3" value="3" disabled>
+                  <label class="rating-star" for="villasatpocodiablo-3" aria-label="Рейтинг. 3 звезды"></label>
+                  <input class="rating-input" type="radio" name="villasatpocodiablo" id="villasatpocodiablor-4" value="4" disabled>
+                  <label class="rating-star" for="villasatpocodiablo-4" aria-label="Рейтинг. 4 звезды"></label>
+                  <div class="rating-focus"></div>
                 </div>
-            </fieldset>
+              </fieldset>
               <p>Рейтинг<span>9.2</span></p>
             </div>
           </li>
@@ -238,13 +234,12 @@
     <footer class="main-footer">
       <div class="footer">
         <div class="contacts">
-          <a href="#!" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona </a>
+          <a href="https://www.instagram.com/" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona </a>
           <a href="tel:+74956660166" onclick="this.blur();">ТЕЛ: +7(495) 666-01-66</a>
         </div>
         <ul class="social-group">
           <li class="social">
-            <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"
-              onclick="this.blur();">
+            <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter" onclick="this.blur();">
               <span class="visually-hidden">Твиттер</span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewbox="0 0 17 15">
                 <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
@@ -260,8 +255,7 @@
             </a>
           </li>
           <li class="social">
-            <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"
-              onclick="this.blur();">
+            <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube" onclick="this.blur();">
               <span class="visually-hidden">Ютуб</span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewbox="0 0 20 16">
                 <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
@@ -271,8 +265,7 @@
         </ul>
         <div class="site-htmlacademy">
           <p>Website by</p>
-          <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank"
-            onclick="this.blur();"></a>
+          <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank" onclick="this.blur();"></a>
         </div>
       </div>
     </footer>

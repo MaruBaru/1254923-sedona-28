@@ -14,6 +14,7 @@ try {
 
 
 //===== Открытие и закрытие модального окна на главной странице=====
+
 if (searchBottom && searchForm){
   // модальное окно открыто по умолчанию
   searchForm.classList.add("form-open");
@@ -66,9 +67,8 @@ document.addEventListener("keydown", function (evt) {
     }
 });
 
-
-
 //===== Проверка формы=====
+
 var formArrival = searchForm.querySelector(".arrival-form");
 var formDeparture = searchForm.querySelector(".departure-form");
 var formAdults = searchForm.querySelector(".form-adults");
@@ -87,8 +87,6 @@ if (searchForm){
     searchForm.classList.remove("modal-error");
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("modal-error");
-
-
     // Подсветка input, если неправильно
     if (!formArrival.value){
       formArrival.style.outline = "1px solid #766357";
@@ -119,9 +117,6 @@ if (searchForm){
 });
 }
 
-
-
-
 //====== Добавление карты ======
 
 function initMap() {
@@ -146,7 +141,7 @@ function initMap() {
     });
 }
 
-// ======счетчик + и - ====
+// ======Счетчик  + и - ====
 
 var buttonMinusAdl = document.querySelector(".min-adults");
 var buttonPlusAdl = document.querySelector(".plus-adults");
@@ -180,5 +175,3 @@ buttonPlusChild.addEventListener("click", function (evt) {
    formChildren.value++;
   }
 });
-
-

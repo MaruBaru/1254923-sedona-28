@@ -6,7 +6,7 @@
     <title>Седона:главная страница</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   </head>
   <body class="page-body">
@@ -20,40 +20,41 @@
             <a href="#!" onclick="this.blur();">Фото и видео</a>
           </li>
           <li class="navigation-item">
+            <span class="visually-hidden">Логотип</span>
+          </li>
+          <li class="navigation-item">
             <a href="#!" onclick="this.blur();">Карта штата</a>
           </li>
           <li class="navigation-item">
             <a href="hotels.html" onclick="this.blur();">Гостиницы</a>
           </li>
         </ul>
-          <a class="main-logo" href="index.html" aria-label="Логотип города Седона"> 
-            <img src="img/logo_sedona.svg" alt="Логотип Седона" width="138" height="70">
-          </a>
+        <a class="main-logo active-page" href="index.html" aria-label="Логотип города Седона">
+          <img src="img/logo_sedona.svg" alt="Логотип Седона" width="138" height="70">
+        </a>
       </nav>
     </header>
-    <main class="main-contant">
+    <main class="main-content">
       <section class="hero">
         <div class="welcome-sedona">
-          <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону" width="457"
-            height="351">
+          <img class="slogan-welcome-sedona" src="img/welcome.svg" alt="Добро пожаловать в Седону" width="457" height="351">
         </div>
         <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
-      <section class="contant-reason">
-        <div class="main-contant-reason advantage">
+      <section class="content-reason">
+        <div class="main-content-reason advantage">
           <div class="block blue">
             <h2>Настоящий городок</h2>
             <span>- №1 -</span>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="gallery">
-            <img src="img/realtown.jpg" alt="Изображение деревни" width="800"
-              height="256">
+            <img src="img/realtown.jpg" alt="Изображение деревни" width="800" height="256">
           </div>
         </div>
-        <section class="main-contant-services">
-          <div class=" block housing services">
+        <section class="main-content-services">
+          <div class="block housing services">
             <h2 class="services-head">
               <a href="#!" onclick="this.blur();">Жилье</a>
             </h2>
@@ -72,7 +73,7 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </section>
-        <div class="main-contant-reason advantage">
+        <div class="main-content-reason advantage">
           <div class="gallery">
             <img src="img/devilsbridge.jpg" alt="Изображение мост дьявола" width="800" height="256">
           </div>
@@ -82,7 +83,7 @@
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
-        <section class="main-contant-reason reason-group">
+        <section class="main-content-reason reason-group">
           <div class="block wrap">
             <h2>Небольшая площадь</h2>
             <span>- №3 -</span>
@@ -102,9 +103,7 @@
       </section>
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
-        <p>
-          Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне
-        </p>
+        <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
       </section>
       <section class="search">
         <button class="button search-button" type="button" onclick="this.blur();">Поиск гостиницы в седоне</button>
@@ -118,8 +117,7 @@
             </div>
             <div class="departure">
               <label class="form-name" for="departure">Дата выезда:</label>
-              <input class="departure-form" id="departure" type="text" name="departure" placeholder="4 июля 2017"
-                required>
+              <input class="departure-form" id="departure" type="text" name="departure" placeholder="4 июля 2017" required>
               <button type="button" class="calendar" aria-label="Календарь" onclick="this.blur();"></button>
             </div>
             <div class="people">
@@ -147,13 +145,12 @@
     <footer class="main-footer">
       <div class="footer">
         <div class="contacts">
-          <a href="#!" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona</a>
+          <a href="https://www.instagram.com/" aria-label="Инстаграм города Седона" target="_blank" onclick="this.blur();">#visitsedona</a>
           <a href="tel:+74956660166" onclick="this.blur();">ТЕЛ: +7(495) 666-01-66</a>
         </div>
         <ul class="social-group">
           <li class="social">
-            <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter"
-              onclick="this.blur();">
+            <a class="social-bth-tw" href="https://twitter.com/" target="_blank" aria-label="twitter" onclick="this.blur();">
               <span class="visually-hidden">Твиттер</span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewbox="0 0 17 15">
                 <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
@@ -169,8 +166,7 @@
             </a>
           </li>
           <li class="social">
-            <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube"
-              onclick="this.blur();">
+            <a class="social-bth-yt" href="https://www.youtube.com/" target="_blank" aria-label="youTube" onclick="this.blur();">
               <span class="visually-hidden">Ютуб</span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewbox="0 0 20 16">
                 <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
@@ -180,12 +176,11 @@
         </ul>
         <div class="site-htmlacademy">
           <p>Website by</p>
-          <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank"
-            onclick="this.blur();"></a>
+          <a href="https://htmlacademy.ru/" class="htmlacademy" aria-label="Сайт htmlAcademy" target="_blank" onclick="this.blur();"></a>
         </div>
       </div>
     </footer>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_UdA4J5tzDWXLEUgpUrDSy4XTGlGSVzk&callback=initMap"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -105,29 +105,9 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-/* 5 пунктов меню в каждом ряду, кроме 1-ого*/
+/* navigation-item */
 
 .navigation-item {
-  width: 15%;
-  margin-right: 10px;
-  text-align: left;
-}
-
-.navigation-item:nth-child(5n+4),
-.navigation-item:nth-child(5n+5) {
-  text-align: right;
-  margin-left: 10px;
-  margin-right: 0;
-}
-
-.navigation-item:nth-of-type(5n-2) {
-  margin: 0 50px;
-  text-align: center;
-} 
-
-/*  Возможное расположение пунктов меню по правой и левой стороне относительно логотипа до 8 элемента*/
-
-/* .navigation-item:nth-child(-n+8) {
   width: 20%;
   margin-left: 10px;
   text-align: right;
@@ -141,18 +121,8 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-item:nth-of-type(4n-2) {
-  margin-right: auto;
-} */
-
-/* Увеличение пунктов меню в ряду, начиная с 3-го ряда*/
-/* .navigation-item:nth-of-type(7) {
-  margin-left: 100px;
+  margin-right: 160px;
 }
-
-.navigation-item:nth-child(n+10) {
-  width: 10%;
-  margin: 0 10px;
-} */
 
 .site-navigation a {
   display: block;
@@ -262,10 +232,10 @@ input[type="radio"].visually-hidden {
 .content-reason {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
   align-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .main-content-reason,
@@ -315,7 +285,8 @@ input[type="radio"].visually-hidden {
   color: var(--basic-brown);
 }
 
-.block h2 {
+.block h3 {
+  font-size: 21px;
   padding-bottom: 27px;
   margin: 0;
   width: 160px;
@@ -334,6 +305,8 @@ input[type="radio"].visually-hidden {
 .main-content-services {
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .services {
@@ -343,11 +316,13 @@ input[type="radio"].visually-hidden {
 .reason-group {
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .wrap {
   width: 258px;
-  padding: 47px 71px 50px 71px;
+  padding: 50px 71px 60px 71px;
   background-color: var(--basic-extra-light);
 }
 
@@ -356,7 +331,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-content-services .block {
-  padding: 55px 50px 82px 50px;
+  padding: 60px 50px 82px 50px;
 }
 
 .main-content-services .services-head {
@@ -397,11 +372,10 @@ input[type="radio"].visually-hidden {
   color: var(--basic-white);
   max-width: 400px;
   padding: 50px 0 50px 0;
-  min-height: 100%;
   display: flex;
 }
 
-.blue h2 {
+.blue h3 {
   color: var(--basic-white);
   padding-left: 50px;
   padding-right: 50px;
@@ -413,6 +387,10 @@ input[type="radio"].visually-hidden {
 
 .blue p {
   padding: 0 43px;
+}
+
+.wrap h3 {
+  width: 120px;
 }
 
 .hotel-search {
@@ -508,6 +486,8 @@ input[type="radio"].visually-hidden {
 .contacts {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -539,11 +519,11 @@ input[type="radio"].visually-hidden {
 /* social-group */
 
 .social-group {
-  width: 150px;
+  width: 350px;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -551,7 +531,7 @@ input[type="radio"].visually-hidden {
 .social {
   width: 46px;
   height: 48px;
-  margin: 0 3px;
+  margin: 3px;
   background-color: var(--basic-blue);
   cursor: pointer;
   display: flex;
@@ -559,6 +539,9 @@ input[type="radio"].visually-hidden {
 }
 
 .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: auto;
   padding: 10px;
@@ -936,7 +919,7 @@ form-open {
   padding-left: 42px;
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -947,7 +930,7 @@ form-open {
   background-repeat: no-repeat;
 }
 
-.filter-input-checkbox:checked+label::after {
+.filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: 0;
@@ -958,7 +941,7 @@ form-open {
   background-repeat: no-repeat;
 }
 
-.filter-input-checkbox:disabled+label::before {
+.filter-input-checkbox:disabled + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -968,7 +951,17 @@ form-open {
   opacity: 0.5;
 }
 
-.filter-input-checkbox:focus+label::before {
+.filter-input-checkbox:disabled:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  opacity: 0.5;
+}
+
+.filter-input-checkbox:focus + label::before {
   outline: 2px solid black;
   outline-offset: 5px;
 }
@@ -1373,7 +1366,7 @@ fieldset .filter-cost {
   cursor: pointer;
 }
 
-.rating-input:focus~.rating-focus {
+.rating-input:focus ~ .rating-focus {
   position: absolute;
   top: -2px;
   right: 0;
@@ -1384,7 +1377,7 @@ fieldset .filter-cost {
 }
 
 .rating-star:hover,
-.rating-input:checked+.rating-star {
+.rating-input:checked + .rating-star {
   background-image: url(../img/star.svg);
 }
 

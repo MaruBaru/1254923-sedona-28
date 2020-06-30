@@ -238,7 +238,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.main-content-reason,
+.picture-reason,
 .main-content-services {
   display: flex;
   align-items: stretch;
@@ -466,7 +466,7 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  height: 120px;
+  min-height: 120px;
   display: flex;
   justify-content: center;
   flex-direction: column;
